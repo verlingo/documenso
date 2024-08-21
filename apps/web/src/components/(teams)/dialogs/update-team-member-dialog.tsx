@@ -149,7 +149,7 @@ export const UpdateTeamMemberDialog = ({
                     <FormLabel required>Role</FormLabel>
                     <FormControl>
                       <Select {...field} onValueChange={field.onChange}>
-                        <SelectTrigger className="text-muted-foreground">
+                        <SelectTrigger className="text-muted">
                           <SelectValue />
                         </SelectTrigger>
 

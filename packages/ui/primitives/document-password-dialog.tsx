@@ -56,7 +56,7 @@ export const PasswordDialog = ({
         <DialogHeader>
           <DialogTitle>Password Required</DialogTitle>
 
-          <DialogDescription className="text-muted-foreground">
+          <DialogDescription className="text-muted">
             This document is password protected. Please enter the password to view the document.
           </DialogDescription>
         </DialogHeader>

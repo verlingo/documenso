@@ -34,9 +34,7 @@ export default function SignInPage({ searchParams }: SignInPageProps) {
       <div className="border-border dark:bg-background z-10 rounded-xl border bg-neutral-100 p-6">
         <h1 className="text-2xl font-semibold">Sign in to your account</h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
-          Welcome back, we are lucky to have you.
-        </p>
+        <p className="text-muted mt-2 text-sm">Welcome back, we are lucky to have you.</p>
         <hr className="-mx-6 my-4" />
 
         <SignInForm
@@ -46,7 +44,7 @@ export default function SignInPage({ searchParams }: SignInPageProps) {
         />
 
         {NEXT_PUBLIC_DISABLE_SIGNUP !== 'true' && (
-          <p className="text-muted-foreground mt-6 text-center text-sm">
+          <p className="text-muted mt-6 text-center text-sm">
             Don't have an account?{' '}
             <Link href="/signup" className="text-documenso-700 duration-200 hover:opacity-70">
               Sign up

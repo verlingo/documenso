@@ -115,8 +115,7 @@ export const DeleteAccountDialog = ({ className, user }: DeleteAccountDialogProp
               {!hasTwoFactorAuthentication && (
                 <div className="mt-4">
                   <Label>
-                    Please type{' '}
-                    <span className="text-muted-foreground font-semibold">{user.email}</span> to
+                    Please type <span className="text-muted font-semibold">{user.email}</span> to
                     confirm.
                   </Label>
 

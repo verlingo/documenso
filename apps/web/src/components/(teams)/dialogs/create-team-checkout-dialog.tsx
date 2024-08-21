@@ -120,11 +120,11 @@ export const CreateTeamCheckoutDialog = ({
               >
                 <CardContent className="flex h-full flex-col p-6">
                   {selectedPrice.interval === 'monthly' ? (
-                    <div className="text-muted-foreground text-lg font-medium">
+                    <div className="text-muted text-lg font-medium">
                       $50 USD <span className="text-xs">per month</span>
                     </div>
                   ) : (
-                    <div className="text-muted-foreground flex items-center justify-between text-lg font-medium">
+                    <div className="text-muted flex items-center justify-between text-lg font-medium">
                       <span>
                         $480 USD <span className="text-xs">per year</span>
                       </span>
@@ -135,7 +135,7 @@ export const CreateTeamCheckoutDialog = ({
                     </div>
                   )}
 
-                  <div className="text-muted-foreground mt-1.5 text-sm">
+                  <div className="text-muted mt-1.5 text-sm">
                     <p>This price includes minimum 5 seats.</p>
 
                     <p className="mt-1">

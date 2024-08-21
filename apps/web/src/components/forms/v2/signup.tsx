@@ -242,7 +242,7 @@ export const SignUpFormV2 = ({
           <div className="h-20">
             <h1 className="text-xl font-semibold md:text-2xl">Create a new account</h1>
 
-            <p className="text-muted-foreground mt-2 text-xs md:text-sm">
+            <p className="text-muted mt-2 text-xs md:text-sm">
               Create your account and start using state-of-the-art document signing. Open and
               beautiful signing is within your grasp.
             </p>
@@ -253,7 +253,7 @@ export const SignUpFormV2 = ({
           <div className="h-20">
             <h1 className="text-xl font-semibold md:text-2xl">Claim your username now</h1>
 
-            <p className="text-muted-foreground mt-2 text-xs md:text-sm">
+            <p className="text-muted mt-2 text-xs md:text-sm">
               You will get notified & be able to set up your documenso public profile when we launch
               the feature.
             </p>
@@ -343,7 +343,7 @@ export const SignUpFormV2 = ({
                   <>
                     <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
                       <div className="bg-border h-px flex-1" />
-                      <span className="text-muted-foreground bg-transparent">Or</span>
+                      <span className="text-muted bg-transparent">Or</span>
                       <div className="bg-border h-px flex-1" />
                     </div>
                   </>
@@ -355,7 +355,7 @@ export const SignUpFormV2 = ({
                       type="button"
                       size="lg"
                       variant={'outline'}
-                      className="bg-background text-muted-foreground border"
+                      className="bg-background text-muted border"
                       disabled={isSubmitting}
                       onClick={onSignUpWithGoogleClick}
                     >
@@ -371,7 +371,7 @@ export const SignUpFormV2 = ({
                       type="button"
                       size="lg"
                       variant={'outline'}
-                      className="bg-background text-muted-foreground border"
+                      className="bg-background text-muted border"
                       disabled={isSubmitting}
                       onClick={onSignUpWithOIDCClick}
                     >
@@ -381,7 +381,7 @@ export const SignUpFormV2 = ({
                   </>
                 )}
 
-                <p className="text-muted-foreground mt-4 text-sm">
+                <p className="text-muted mt-4 text-sm">
                   Already have an account?{' '}
                   <Link href="/signin" className="text-documenso-700 duration-200 hover:opacity-70">
                     Sign in instead
@@ -411,7 +411,7 @@ export const SignUpFormV2 = ({
 
                       <FormMessage />
 
-                      <div className="bg-muted/50 border-border text-muted-foreground mt-2 inline-block max-w-[16rem] truncate rounded-md border px-2 py-1 text-sm lowercase">
+                      <div className="bg-muted/50 border-border text-muted mt-2 inline-block max-w-[16rem] truncate rounded-md border px-2 py-1 text-sm lowercase">
                         {baseUrl.host}/u/{field.value || '<username>'}
                       </div>
                     </FormItem>
@@ -422,13 +422,13 @@ export const SignUpFormV2 = ({
 
             <div className="mt-6">
               {step === 'BASIC_DETAILS' && (
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted text-sm">
                   <span className="font-medium">Basic details</span> 1/2
                 </p>
               )}
 
               {step === 'CLAIM_USERNAME' && (
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted text-sm">
                   <span className="font-medium">Claim username</span> 2/2
                 </p>
               )}

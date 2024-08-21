@@ -1,7 +1,5 @@
 import { createElement } from 'react';
 
-import { mailer } from '@documenso/email/mailer';
-import { render } from '@documenso/email/render';
 import { DocumentPendingEmailTemplate } from '@documenso/email/templates/document-pending';
 import { prisma } from '@documenso/prisma';
 
@@ -50,17 +48,17 @@ export const sendPendingEmail = async ({ documentId, recipientId }: SendPendingE
     assetBaseUrl,
   });
 
-  await mailer.sendMail({
-    to: {
-      address: email,
-      name,
-    },
-    from: {
-      name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
-      address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
-    },
-    subject: 'Waiting for others to complete signing.',
-    html: render(template),
-    text: render(template, { plainText: true }),
-  });
+  // await mailer.sendMail({
+  //   to: {
+  //     address: email,
+  //     name,
+  //   },
+  //   from: {
+  //     name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
+  //     address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
+  //   },
+  //   subject: 'Waiting for others to complete signing.',
+  //   html: render(template),
+  //   text: render(template, { plainText: true }),
+  // });
 };

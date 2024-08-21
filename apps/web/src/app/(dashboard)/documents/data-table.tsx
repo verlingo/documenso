@@ -121,7 +121,7 @@ export const DocumentsDataTable = ({
 
       {isPending && (
         <div className="bg-background/50 absolute inset-0 flex items-center justify-center">
-          <Loader className="text-muted-foreground h-8 w-8 animate-spin" />
+          <Loader className="text-muted h-8 w-8 animate-spin" />
         </div>
       )}
     </div>

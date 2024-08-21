@@ -106,9 +106,7 @@ export const MenuSwitcher = ({ user, teams: initialTeamsData }: MenuSwitcherProp
             avatarFallback={formatAvatarFallback(selectedTeam?.name)}
             primaryText={selectedTeam ? selectedTeam.name : user.name}
             secondaryText={formatSecondaryAvatarText(selectedTeam)}
-            rightSideComponent={
-              <ChevronsUpDown className="text-muted-foreground ml-auto h-4 w-4" />
-            }
+            rightSideComponent={<ChevronsUpDown className="text-muted ml-auto h-4 w-4" />}
             textSectionClassName="hidden lg:flex"
           />
         </Button>
@@ -154,7 +152,7 @@ export const MenuSwitcher = ({ user, teams: initialTeamsData }: MenuSwitcherProp
                     <Button
                       title="Manage teams"
                       variant="ghost"
-                      className="text-muted-foreground flex h-5 w-5 items-center justify-center p-0"
+                      className="text-muted flex h-5 w-5 items-center justify-center p-0"
                       asChild
                     >
                       <Link href="/settings/teams">
@@ -167,7 +165,7 @@ export const MenuSwitcher = ({ user, teams: initialTeamsData }: MenuSwitcherProp
                     <Button
                       title="Create team"
                       variant="ghost"
-                      className="text-muted-foreground flex h-5 w-5 items-center justify-center p-0"
+                      className="text-muted flex h-5 w-5 items-center justify-center p-0"
                       asChild
                     >
                       <Link href="/settings/teams?action=add-team">
@@ -229,7 +227,7 @@ export const MenuSwitcher = ({ user, teams: initialTeamsData }: MenuSwitcherProp
             </div>
           </>
         ) : (
-          <DropdownMenuItem className="text-muted-foreground px-4 py-2" asChild>
+          <DropdownMenuItem className="text-muted px-4 py-2" asChild>
             <Link
               href="/settings/teams?action=add-team"
               className="flex items-center justify-between"
@@ -243,18 +241,18 @@ export const MenuSwitcher = ({ user, teams: initialTeamsData }: MenuSwitcherProp
         <DropdownMenuSeparator />
 
         {isUserAdmin && (
-          <DropdownMenuItem className="text-muted-foreground px-4 py-2" asChild>
+          <DropdownMenuItem className="text-muted px-4 py-2" asChild>
             <Link href="/admin">Admin panel</Link>
           </DropdownMenuItem>
         )}
 
-        <DropdownMenuItem className="text-muted-foreground px-4 py-2" asChild>
+        <DropdownMenuItem className="text-muted px-4 py-2" asChild>
           <Link href="/settings/profile">User settings</Link>
         </DropdownMenuItem>
 
         {selectedTeam &&
           canExecuteTeamAction('MANAGE_TEAM', selectedTeam.currentTeamMember.role) && (
-            <DropdownMenuItem className="text-muted-foreground px-4 py-2" asChild>
+            <DropdownMenuItem className="text-muted px-4 py-2" asChild>
               <Link href={`/t/${selectedTeam.url}/settings/`}>Team settings</Link>
             </DropdownMenuItem>
           )}

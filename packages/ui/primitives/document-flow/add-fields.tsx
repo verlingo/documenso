@@ -389,7 +389,7 @@ export const AddFieldsFormPartial = ({
                   type="button"
                   variant="outline"
                   role="combobox"
-                  className="bg-background text-muted-foreground mb-12 justify-between font-normal"
+                  className="bg-background text-muted mb-12 justify-between font-normal"
                 >
                   {selectedSigner?.email && (
                     <span className="flex-1 truncate text-left">
@@ -410,21 +410,21 @@ export const AddFieldsFormPartial = ({
                   <CommandInput />
 
                   <CommandEmpty>
-                    <span className="text-muted-foreground inline-block px-4">
+                    <span className="text-muted inline-block px-4">
                       No recipient matching this description was found.
                     </span>
                   </CommandEmpty>
 
                   {recipientsByRoleToDisplay.map(([role, recipients], roleIndex) => (
                     <CommandGroup key={roleIndex}>
-                      <div className="text-muted-foreground mb-1 ml-2 mt-2 text-xs font-medium">
+                      <div className="text-muted mb-1 ml-2 mt-2 text-xs font-medium">
                         {`${RECIPIENT_ROLES_DESCRIPTION[role].roleName}s`}
                       </div>
 
                       {recipients.length === 0 && (
                         <div
                           key={`${role}-empty`}
-                          className="text-muted-foreground/80 px-4 pb-4 pt-2.5 text-center text-xs"
+                          className="text-muted/80 px-4 pb-4 pt-2.5 text-center text-xs"
                         >
                           No recipients with this role
                         </div>
@@ -434,7 +434,7 @@ export const AddFieldsFormPartial = ({
                         <CommandItem
                           key={recipient.id}
                           className={cn('px-2 last:mb-1 [&:not(:first-child)]:mt-1', {
-                            'text-muted-foreground': recipient.sendStatus === SendStatus.SENT,
+                            'text-muted': recipient.sendStatus === SendStatus.SENT,
                           })}
                           onSelect={() => {
                             setSelectedSigner(recipient);
@@ -472,7 +472,7 @@ export const AddFieldsFormPartial = ({
                                   <Info className="ml-2 h-4 w-4" />
                                 </TooltipTrigger>
 
-                                <TooltipContent className="text-muted-foreground max-w-xs">
+                                <TooltipContent className="text-muted max-w-xs">
                                   This document has already been sent to this recipient. You can no
                                   longer edit this recipient.
                                 </TooltipContent>
@@ -501,14 +501,14 @@ export const AddFieldsFormPartial = ({
                   <CardContent className="flex flex-col items-center justify-center px-6 py-4">
                     <p
                       className={cn(
-                        'text-muted-foreground group-data-[selected]:text-foreground w-full truncate text-3xl font-medium',
+                        'text-muted group-data-[selected]:text-foreground w-full truncate text-3xl font-medium',
                         fontCaveat.className,
                       )}
                     >
                       {selectedSigner?.name || 'Signature'}
                     </p>
 
-                    <p className="text-muted-foreground mt-2 text-center text-xs">Signature</p>
+                    <p className="text-muted mt-2 text-center text-xs">Signature</p>
                   </CardContent>
                 </Card>
               </button>
@@ -524,13 +524,13 @@ export const AddFieldsFormPartial = ({
                   <CardContent className="flex flex-col items-center justify-center px-6 py-4">
                     <p
                       className={cn(
-                        'text-muted-foreground group-data-[selected]:text-foreground text-xl font-medium',
+                        'text-muted group-data-[selected]:text-foreground text-xl font-medium',
                       )}
                     >
                       {'Email'}
                     </p>
 
-                    <p className="text-muted-foreground mt-2 text-xs">Email</p>
+                    <p className="text-muted mt-2 text-xs">Email</p>
                   </CardContent>
                 </Card>
               </button>
@@ -546,13 +546,13 @@ export const AddFieldsFormPartial = ({
                   <CardContent className="flex flex-col items-center justify-center px-6 py-4">
                     <p
                       className={cn(
-                        'text-muted-foreground group-data-[selected]:text-foreground text-xl font-medium',
+                        'text-muted group-data-[selected]:text-foreground text-xl font-medium',
                       )}
                     >
                       {'Name'}
                     </p>
 
-                    <p className="text-muted-foreground mt-2 text-xs">Name</p>
+                    <p className="text-muted mt-2 text-xs">Name</p>
                   </CardContent>
                 </Card>
               </button>
@@ -568,13 +568,13 @@ export const AddFieldsFormPartial = ({
                   <CardContent className="flex flex-col items-center justify-center px-6 py-4">
                     <p
                       className={cn(
-                        'text-muted-foreground group-data-[selected]:text-foreground text-xl font-medium',
+                        'text-muted group-data-[selected]:text-foreground text-xl font-medium',
                       )}
                     >
                       {'Date'}
                     </p>
 
-                    <p className="text-muted-foreground mt-2 text-xs">Date</p>
+                    <p className="text-muted mt-2 text-xs">Date</p>
                   </CardContent>
                 </Card>
               </button>
@@ -590,13 +590,13 @@ export const AddFieldsFormPartial = ({
                   <CardContent className="flex flex-col items-center justify-center px-6 py-4">
                     <p
                       className={cn(
-                        'text-muted-foreground group-data-[selected]:text-foreground text-xl font-medium',
+                        'text-muted group-data-[selected]:text-foreground text-xl font-medium',
                       )}
                     >
                       {'Text'}
                     </p>
 
-                    <p className="text-muted-foreground mt-2 text-xs">Custom Text</p>
+                    <p className="text-muted mt-2 text-xs">Custom Text</p>
                   </CardContent>
                 </Card>
               </button>

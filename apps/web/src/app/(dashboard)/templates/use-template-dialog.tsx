@@ -243,7 +243,7 @@ export function UseTemplateDialog({
                           />
 
                           <label
-                            className="text-muted-foreground ml-2 flex items-center text-sm"
+                            className="text-muted ml-2 flex items-center text-sm"
                             htmlFor="sendDocument"
                           >
                             Send document
@@ -252,7 +252,7 @@ export function UseTemplateDialog({
                                 <InfoIcon className="mx-1 h-4 w-4" />
                               </TooltipTrigger>
 
-                              <TooltipContent className="text-muted-foreground z-[99999] max-w-md space-y-2 p-4">
+                              <TooltipContent className="text-muted z-[99999] max-w-md space-y-2 p-4">
                                 <p>
                                   The document will be immediately sent to recipients if this is
                                   checked.

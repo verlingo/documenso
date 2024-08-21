@@ -112,7 +112,7 @@ export const ProfileForm = ({ className, user }: ProfileFormProps) => {
           />
 
           <div>
-            <Label htmlFor="email" className="text-muted-foreground">
+            <Label htmlFor="email" className="text-muted">
               Email
             </Label>
             <Input id="email" type="email" className="bg-muted mt-2" value={user.email} disabled />

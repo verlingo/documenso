@@ -86,10 +86,10 @@ export const DocumentEditPageView = async ({ params, team }: DocumentEditPageVie
       </h1>
 
       <div className="mt-2.5 flex items-center gap-x-6">
-        <DocumentStatus inheritColor status={document.status} className="text-muted-foreground" />
+        <DocumentStatus inheritColor status={document.status} className="text-muted" />
 
         {recipients.length > 0 && (
-          <div className="text-muted-foreground flex items-center">
+          <div className="text-muted flex items-center">
             <Users2 className="mr-2 h-5 w-5" />
 
             <StackAvatarsWithTooltip

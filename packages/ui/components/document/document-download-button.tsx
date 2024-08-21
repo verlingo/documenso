@@ -54,7 +54,8 @@ export const DocumentDownloadButton = ({
     <Button
       type="button"
       variant="outline"
-      className={className}
+      className="text-black"
+      // className={className}
       disabled={disabled || !documentData}
       onClick={onDownloadClick}
       loading={isLoading}

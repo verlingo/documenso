@@ -30,14 +30,29 @@ export const DocumentPendingEmailTemplate = ({
           },
         }}
       >
-        <Body className="mx-auto my-auto font-sans">
-          <Section className="bg-white">
-            <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-4 backdrop-blur-sm">
-              <Section>
-                <Img
+        <Body style={body} className="mx-auto my-auto font-sans">
+          <Section className="">
+            {/* <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-4 backdrop-blur-sm"> */}
+            {/* <Section> */}
+            {/* <Img
                   src={getAssetUrl('/static/logo.png')}
                   alt="Documenso Logo"
                   className="mb-4 h-6"
+                /> */}
+
+            {/* <TemplateDocumentPending documentName={documentName} assetBaseUrl={assetBaseUrl} /> */}
+            {/* </Section> */}
+            {/* </Container> */}
+            <Container
+              style={emailWrapper}
+              className="mx-auto rounded-lg border border-solid border-slate-200 bg-white shadow-lg"
+            >
+              <Section style={{ padding: 30 }}>
+                <Img
+                  src={getAssetUrl('/static/logo.png')}
+                  alt="verlingo Logo"
+                  className="m-6 mb-4 h-6"
+                  style={{ marginBottom: 150 }}
                 />
 
                 <TemplateDocumentPending documentName={documentName} assetBaseUrl={assetBaseUrl} />
@@ -55,3 +70,12 @@ export const DocumentPendingEmailTemplate = ({
 };
 
 export default DocumentPendingEmailTemplate;
+
+const emailWrapper = {
+  maxWidth: '600px',
+  // padding: '1.0rem',
+  borderRadius: '0.5rem',
+};
+const body = {
+  backgroundColor: '#f5f7fb',
+};

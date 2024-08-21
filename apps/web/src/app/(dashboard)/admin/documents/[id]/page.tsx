@@ -40,7 +40,7 @@ export default async function AdminDocumentDetailsPage({ params }: AdminDocument
         )}
       </div>
 
-      <div className="text-muted-foreground mt-4 text-sm">
+      <div className="text-muted mt-4 text-sm">
         <div>
           Created on: <LocaleDate date={document.createdAt} format={DateTime.DATETIME_MED} />
         </div>

@@ -59,7 +59,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
                 key={index}
                 href={link.href}
                 target="_blank"
-                className="text-muted-foreground hover:text-muted-foreground/80"
+                className="text-muted hover:text-muted/80"
               >
                 {link.icon}
               </Link>
@@ -77,7 +77,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
               key={index}
               href={link.href}
               target={link.target}
-              className="text-muted-foreground hover:text-muted-foreground/80 flex-shrink-0 break-words text-sm"
+              className="text-muted hover:text-muted/80 flex-shrink-0 break-words text-sm"
             >
               {link.text}
             </Link>
@@ -85,7 +85,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
         </div>
       </div>
       <div className="mx-auto mt-4 flex w-full max-w-screen-xl flex-wrap items-center justify-between gap-4 px-8 md:mt-12 lg:mt-24">
-        <p className="text-muted-foreground text-sm">
+        <p className="text-muted text-sm">
           © {new Date().getFullYear()} Documenso, Inc. All rights reserved.
         </p>
 

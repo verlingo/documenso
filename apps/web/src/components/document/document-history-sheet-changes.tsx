@@ -13,10 +13,7 @@ export type DocumentHistorySheetChangesProps = {
 
 export const DocumentHistorySheetChanges = ({ values }: DocumentHistorySheetChangesProps) => {
   return (
-    <Badge
-      className="text-muted-foreground mt-3 block w-full space-y-0.5 text-xs"
-      variant="neutral"
-    >
+    <Badge className="text-muted mt-3 block w-full space-y-0.5 text-xs" variant="neutral">
       {values.map(({ key, value }, i) => (
         <p key={typeof key === 'string' ? key : i}>
           <span>{key}: </span>

@@ -139,10 +139,10 @@ export const PublicProfilePageView = ({ user, team, profile }: PublicProfilePage
           <TooltipTrigger asChild>
             <div
               className={cn(
-                'text-muted-foreground/50 flex flex-row items-center justify-center space-x-2 text-xs',
+                'text-muted/50 flex flex-row items-center justify-center space-x-2 text-xs',
                 {
-                  '[&>*:first-child]:text-muted-foreground': !isPublicProfileVisible,
-                  '[&>*:last-child]:text-muted-foreground': isPublicProfileVisible,
+                  '[&>*:first-child]:text-muted': !isPublicProfileVisible,
+                  '[&>*:last-child]:text-muted': isPublicProfileVisible,
                 },
               )}
             >
@@ -156,7 +156,7 @@ export const PublicProfilePageView = ({ user, team, profile }: PublicProfilePage
             </div>
           </TooltipTrigger>
 
-          <TooltipContent className="text-muted-foreground max-w-[40ch] space-y-2 py-2">
+          <TooltipContent className="text-muted max-w-[40ch] space-y-2 py-2">
             {isPublicProfileVisible ? (
               <>
                 <p>

@@ -21,7 +21,7 @@ export const CardMetric = ({ icon: Icon, title, value, className }: CardMetricPr
         <div className="flex items-start">
           {Icon && (
             <div className="mr-2 h-4 w-4">
-              <Icon className="text-muted-foreground h-4 w-4" />
+              <Icon className="text-muted h-4 w-4" />
             </div>
           )}
 

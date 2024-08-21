@@ -45,7 +45,7 @@ export const SigningPageView = ({
       </h1>
 
       <div className="mt-2.5 flex items-center gap-x-6">
-        <p className="text-muted-foreground">
+        <p className="text-muted">
           {document.User.name} ({document.User.email}) has invited you to{' '}
           {recipient.role === RecipientRole.VIEWER && 'view'}
           {recipient.role === RecipientRole.SIGNER && 'sign'}

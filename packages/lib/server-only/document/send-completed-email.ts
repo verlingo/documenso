@@ -1,7 +1,5 @@
 import { createElement } from 'react';
 
-import { mailer } from '@documenso/email/mailer';
-import { render } from '@documenso/email/render';
 import { DocumentCompletedEmailTemplate } from '@documenso/email/templates/document-completed';
 import { prisma } from '@documenso/prisma';
 import { DocumentSource } from '@documenso/prisma/client';
@@ -69,27 +67,27 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
       downloadLink: documentOwnerDownloadLink,
     });
 
-    await mailer.sendMail({
-      to: [
-        {
-          name: owner.name || '',
-          address: owner.email,
-        },
-      ],
-      from: {
-        name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
-        address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
-      },
-      subject: 'Signing Complete!',
-      html: render(template),
-      text: render(template, { plainText: true }),
-      attachments: [
-        {
-          filename: document.title.endsWith('.pdf') ? document.title : document.title + '.pdf',
-          content: Buffer.from(completedDocument),
-        },
-      ],
-    });
+    // await mailer.sendMail({
+    //   to: [
+    //     {
+    //       name: owner.name || '',
+    //       address: owner.email,
+    //     },
+    //   ],
+    //   from: {
+    //     name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
+    //     address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
+    //   },
+    //   subject: 'Signing Complete!',
+    //   html: render(template),
+    //   text: render(template, { plainText: true }),
+    //   attachments: [
+    //     {
+    //       filename: document.title.endsWith('.pdf') ? document.title : document.title + '.pdf',
+    //       content: Buffer.from(completedDocument),
+    //     },
+    //   ],
+    // });
 
     await prisma.documentAuditLog.create({
       data: createDocumentAuditLogData({
@@ -129,30 +127,30 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
             : undefined,
       });
 
-      await mailer.sendMail({
-        to: [
-          {
-            name: recipient.name,
-            address: recipient.email,
-          },
-        ],
-        from: {
-          name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
-          address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
-        },
-        subject:
-          isDirectTemplate && document.documentMeta?.subject
-            ? renderCustomEmailTemplate(document.documentMeta.subject, customEmailTemplate)
-            : 'Signing Complete!',
-        html: render(template),
-        text: render(template, { plainText: true }),
-        attachments: [
-          {
-            filename: document.title.endsWith('.pdf') ? document.title : document.title + '.pdf',
-            content: Buffer.from(completedDocument),
-          },
-        ],
-      });
+      // await mailer.sendMail({
+      //   to: [
+      //     {
+      //       name: recipient.name,
+      //       address: recipient.email,
+      //     },
+      //   ],
+      //   from: {
+      //     name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
+      //     address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
+      //   },
+      //   subject:
+      //     isDirectTemplate && document.documentMeta?.subject
+      //       ? renderCustomEmailTemplate(document.documentMeta.subject, customEmailTemplate)
+      //       : 'Signing Complete!',
+      //   html: render(template),
+      //   text: render(template, { plainText: true }),
+      //   attachments: [
+      //     {
+      //       filename: document.title.endsWith('.pdf') ? document.title : document.title + '.pdf',
+      //       content: Buffer.from(completedDocument),
+      //     },
+      //   ],
+      // });
 
       await prisma.documentAuditLog.create({
         data: createDocumentAuditLogData({

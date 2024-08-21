@@ -45,7 +45,7 @@ export const DocumentFlowFormContainerHeader = ({
     <>
       <h3 className="text-foreground text-2xl font-semibold">{title}</h3>
 
-      <p className="text-muted-foreground mt-2 text-sm">{description}</p>
+      <p className="text-muted mt-2 text-sm">{description}</p>
 
       <hr className="border-border mb-8 mt-4" />
     </>
@@ -99,7 +99,7 @@ export const DocumentFlowFormContainerStep = ({
 }: DocumentFlowFormContainerStepProps) => {
   return (
     <div>
-      <p className="text-muted-foreground text-sm">
+      <p className="text-muted text-sm">
         Step <span>{`${step} of ${maxStep}`}</span>
       </p>
 

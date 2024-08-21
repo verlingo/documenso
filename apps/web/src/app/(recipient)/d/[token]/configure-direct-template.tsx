@@ -125,7 +125,7 @@ export const ConfigureDirectTemplateFormPartial = ({
                   </FormControl>
 
                   {!fieldState.error && (
-                    <p className="text-muted-foreground text-xs">
+                    <p className="text-muted text-xs">
                       Enter your email address to receive the completed document.
                     </p>
                   )}

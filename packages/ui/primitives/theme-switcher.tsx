@@ -13,7 +13,7 @@ export const ThemeSwitcher = () => {
   return (
     <div className="bg-muted flex items-center gap-x-1 rounded-full p-1">
       <button
-        className="text-muted-foreground relative z-10 flex h-8 w-8 items-center justify-center rounded-full"
+        className="text-muted relative z-10 flex h-8 w-8 items-center justify-center rounded-full"
         onClick={() => setTheme(THEMES_TYPE.LIGHT)}
       >
         {isMounted && theme === THEMES_TYPE.LIGHT && (
@@ -26,7 +26,7 @@ export const ThemeSwitcher = () => {
       </button>
 
       <button
-        className="text-muted-foreground relative z-10 flex h-8 w-8 items-center justify-center rounded-full"
+        className="text-muted relative z-10 flex h-8 w-8 items-center justify-center rounded-full"
         onClick={() => setTheme(THEMES_TYPE.DARK)}
       >
         {isMounted && theme === THEMES_TYPE.DARK && (
@@ -40,7 +40,7 @@ export const ThemeSwitcher = () => {
       </button>
 
       <button
-        className="text-muted-foreground relative z-10 flex h-8 w-8 items-center justify-center rounded-full"
+        className="text-muted relative z-10 flex h-8 w-8 items-center justify-center rounded-full"
         onClick={() => setTheme(THEMES_TYPE.SYSTEM)}
       >
         {isMounted && theme === THEMES_TYPE.SYSTEM && (

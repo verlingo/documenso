@@ -43,7 +43,7 @@ export const NoLongerAvailable = ({
           is no longer available to sign
         </h2>
 
-        <p className="text-muted-foreground/60 mt-2.5 max-w-[60ch] text-center text-sm font-medium md:text-base">
+        <p className="text-muted/60 mt-2.5 max-w-[60ch] text-center text-sm font-medium md:text-base">
           This document has been cancelled by the owner.
         </p>
 
@@ -52,7 +52,7 @@ export const NoLongerAvailable = ({
             Go Back Home
           </Link>
         ) : (
-          <p className="text-muted-foreground/60 mt-36 text-sm">
+          <p className="text-muted/60 mt-36 text-sm">
             Want to send slick signing links like this one?{' '}
             <Link
               href="https://documenso.com"

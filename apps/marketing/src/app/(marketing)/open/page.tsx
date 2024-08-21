@@ -152,7 +152,7 @@ export default async function OpenPage() {
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-3xl font-bold lg:text-5xl">Open Startup</h1>
 
-          <p className="text-muted-foreground mt-4 max-w-[60ch] text-center text-lg leading-normal">
+          <p className="text-muted mt-4 max-w-[60ch] text-center text-lg leading-normal">
             All our metrics, finances, and learnings are public. We believe in transparency and want
             to share our journey with you. You can read more about why here:{' '}
             <a
@@ -270,7 +270,7 @@ export default async function OpenPage() {
       <div className="col-span-12 mt-12 flex flex-col items-center justify-center">
         <h2 className="text-2xl font-bold">Is there more?</h2>
 
-        <p className="text-muted-foreground mt-4 max-w-[55ch] text-center text-lg leading-normal">
+        <p className="text-muted mt-4 max-w-[55ch] text-center text-lg leading-normal">
           This page is evolving as we learn what makes a great signing company. We'll update it when
           we have more to share.
         </p>

@@ -84,7 +84,7 @@ export const DocumentDropzone = ({
         {...getRootProps()}
         {...props}
       >
-        <CardContent className="text-muted-foreground/40 flex flex-col items-center justify-center p-6">
+        <CardContent className="text-muted/40 flex flex-col items-center justify-center p-6">
           {disabled ? (
             // Disabled State
             <div className="flex">
@@ -103,7 +103,7 @@ export const DocumentDropzone = ({
               >
                 <AlertTriangle
                   strokeWidth="2px"
-                  className="text-muted-foreground/20 group-hover:text-destructive h-12 w-12"
+                  className="text-muted/20 group-hover:text-destructive h-12 w-12"
                 />
               </motion.div>
 
@@ -134,7 +134,7 @@ export const DocumentDropzone = ({
               >
                 <Plus
                   strokeWidth="2px"
-                  className="text-muted-foreground/20 group-hover:text-documenso h-12 w-12"
+                  className="text-muted/20 group-hover:text-documenso h-12 w-12"
                 />
               </motion.div>
 
@@ -153,7 +153,7 @@ export const DocumentDropzone = ({
 
           <p className="text-foreground mt-8 font-medium">{heading[type]}</p>
 
-          <p className="text-muted-foreground/80 mt-1 text-center text-sm">
+          <p className="text-muted/80 mt-1 text-center text-sm">
             {disabled ? disabledMessage : 'Drag & drop your PDF here.'}
           </p>
 

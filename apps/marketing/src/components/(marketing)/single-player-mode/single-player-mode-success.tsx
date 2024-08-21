@@ -83,7 +83,7 @@ export const SinglePlayerModeSuccess = ({
         </div>
       </div>
 
-      <p className="text-muted-foreground/60 mt-16 text-center text-sm">
+      <p className="text-muted/60 mt-16 text-center text-sm">
         Create a{' '}
         <Link
           href={`${NEXT_PUBLIC_WEBAPP_URL()}/signup?utm_source=singleplayer`}

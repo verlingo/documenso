@@ -33,14 +33,12 @@ export const ShowFieldItem = ({ field, recipients }: ShowFieldItemProps) => {
       <Card className={cn('bg-background h-full w-full')}>
         <CardContent
           className={cn(
-            'text-muted-foreground/50 flex h-full w-full flex-col items-center justify-center p-2',
+            'text-muted/50 flex h-full w-full flex-col items-center justify-center p-2',
           )}
         >
           {FRIENDLY_FIELD_TYPE[field.type]}
 
-          <p className="text-muted-foreground/50 w-full truncate text-center text-xs">
-            {signerEmail}
-          </p>
+          <p className="text-muted/50 w-full truncate text-center text-xs">{signerEmail}</p>
         </CardContent>
       </Card>
     </div>,

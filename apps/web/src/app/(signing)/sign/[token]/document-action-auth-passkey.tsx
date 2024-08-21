@@ -140,7 +140,7 @@ export const DocumentActionAuthPasskey = ({
   if (passkeyData.isInitialLoading || (passkeyData.isError && passkeyData.passkeys.length === 0)) {
     return (
       <div className="flex h-28 items-center justify-center">
-        <Loader className="text-muted-foreground h-6 w-6 animate-spin" />
+        <Loader className="text-muted h-6 w-6 animate-spin" />
       </div>
     );
   }
@@ -204,7 +204,7 @@ export const DocumentActionAuthPasskey = ({
 
                   <FormControl>
                     <Select {...field} onValueChange={field.onChange}>
-                      <SelectTrigger className="bg-background text-muted-foreground">
+                      <SelectTrigger className="bg-background text-muted">
                         <SelectValue
                           data-testid="documentAccessSelectValue"
                           placeholder="Select passkey"

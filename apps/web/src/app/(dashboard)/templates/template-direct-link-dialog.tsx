@@ -202,7 +202,7 @@ export const TemplateDirectLinkDialog = ({
                       </div>
 
                       <h3 className="font-semibold">{step.title}</h3>
-                      <p className="text-muted-foreground mt-1 text-sm">{step.description}</p>
+                      <p className="text-muted mt-1 text-sm">{step.description}</p>
                     </li>
                   ))}
                 </ul>
@@ -264,7 +264,7 @@ export const TemplateDirectLinkDialog = ({
                       {validDirectTemplateRecipients.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={3} className="h-16 text-center">
-                            <p className="text-muted-foreground">No valid recipients found</p>
+                            <p className="text-muted">No valid recipients found</p>
                           </TableCell>
                         </TableRow>
                       )}
@@ -276,13 +276,13 @@ export const TemplateDirectLinkDialog = ({
                           onClick={async () => onRecipientTableRowClick(row.id)}
                         >
                           <TableCell>
-                            <div className="text-muted-foreground text-sm">
+                            <div className="text-muted text-sm">
                               <p>{row.name}</p>
-                              <p className="text-muted-foreground/70 text-xs">{row.email}</p>
+                              <p className="text-muted/70 text-xs">{row.email}</p>
                             </div>
                           </TableCell>
 
-                          <TableCell className="text-muted-foreground text-sm">
+                          <TableCell className="text-muted text-sm">
                             {RECIPIENT_ROLES_DESCRIPTION[row.role].roleName}
                           </TableCell>
 
@@ -306,7 +306,7 @@ export const TemplateDirectLinkDialog = ({
                   <DialogFooter className="mx-auto">
                     <div className="flex flex-col items-center justify-center">
                       {validDirectTemplateRecipients.length !== 0 && (
-                        <p className="text-muted-foreground text-sm">Or</p>
+                        <p className="text-muted text-sm">Or</p>
                       )}
 
                       <Button

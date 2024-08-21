@@ -19,7 +19,7 @@ export default function BlogPage() {
       <div className="text-center">
         <h1 className="text-3xl font-bold lg:text-5xl">From the blog</h1>
 
-        <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-center text-lg leading-normal">
+        <p className="text-muted mx-auto mt-4 max-w-xl text-center text-lg leading-normal">
           Get the latest news from Documenso, including product updates, team announcements and
           more!
         </p>
@@ -32,7 +32,7 @@ export default function BlogPage() {
             className="mx-auto mt-8 flex max-w-xl flex-col items-start justify-between pt-8 first:pt-0 sm:mt-16 sm:pt-16"
           >
             <div className="flex items-center gap-x-4 text-xs">
-              <time dateTime={post.date} className="text-muted-foreground">
+              <time dateTime={post.date} className="text-muted">
                 {new Date(post.date).toLocaleDateString()}
               </time>
 

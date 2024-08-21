@@ -300,7 +300,7 @@ export const InviteTeamMembersDialog = ({
                               {index === 0 && <FormLabel required>Role</FormLabel>}
                               <FormControl>
                                 <Select {...field} onValueChange={field.onChange}>
-                                  <SelectTrigger className="text-muted-foreground max-w-[200px]">
+                                  <SelectTrigger className="text-muted max-w-[200px]">
                                     <SelectValue />
                                   </SelectTrigger>
 
@@ -363,7 +363,7 @@ export const InviteTeamMembersDialog = ({
             <div className="mt-4 space-y-4">
               <Card gradient className="h-32">
                 <CardContent
-                  className="text-muted-foreground/80 hover:text-muted-foreground/90 flex h-full cursor-pointer flex-col items-center justify-center rounded-lg p-0 transition-colors"
+                  className="text-muted/80 hover:text-muted/90 flex h-full cursor-pointer flex-col items-center justify-center rounded-lg p-0 transition-colors"
                   onClick={() => fileInputRef.current?.click()}
                 >
                   <Upload className="h-5 w-5" />

@@ -94,7 +94,7 @@ export function BannerForm({ banner }: BannerFormProps) {
   return (
     <div>
       <h2 className="font-semibold">Site Banner</h2>
-      <p className="text-muted-foreground mt-2 text-sm">
+      <p className="text-muted mt-2 text-sm">
         The site banner is a message that is shown at the top of the site. It can be used to display
         important information to your users.
       </p>

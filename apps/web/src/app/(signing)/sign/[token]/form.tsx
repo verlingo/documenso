@@ -93,7 +93,7 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
   return (
     <form
       className={cn(
-        'dark:bg-background border-border bg-widget sticky flex h-full flex-col rounded-xl border px-4 py-6',
+        'border-border bg-widget sticky flex h-full flex-col rounded-xl border px-4 py-6 text-black shadow-md',
         {
           'top-20 max-h-[min(68rem,calc(100vh-6rem))]': session,
           'top-4 max-h-[min(68rem,calc(100vh-2rem))]': !session,
@@ -110,11 +110,11 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
       <fieldset
         disabled={isSubmitting}
         className={cn(
-          'custom-scrollbar -mx-2 flex flex-1 flex-col overflow-y-auto overflow-x-hidden px-2',
+          'custom-scrollbar -mx-2 flex flex-1 flex-col overflow-y-auto overflow-x-hidden px-2 text-black',
         )}
       >
         <div className={cn('flex flex-1 flex-col')}>
-          <h3 className="text-foreground text-2xl font-semibold">
+          <h3 className="text-2xl font-semibold text-black">
             {recipient.role === RecipientRole.VIEWER && 'View Document'}
             {recipient.role === RecipientRole.SIGNER && 'Sign Document'}
             {recipient.role === RecipientRole.APPROVER && 'Approve Document'}
@@ -122,7 +122,7 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
 
           {recipient.role === RecipientRole.VIEWER ? (
             <>
-              <p className="text-muted-foreground mt-2 text-sm">
+              <p className="text-muted mt-2 text-sm text-black">
                 Please mark as viewed to complete
               </p>
 
@@ -133,7 +133,7 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
                 <div className="flex flex-col gap-4 md:flex-row">
                   <Button
                     type="button"
-                    className="dark:bg-muted dark:hover:bg-muted/80 w-full  bg-black/5 hover:bg-black/10"
+                    className="dark:bg-muted dark:hover:bg-muted/80 w-full  bg-black/5 text-white hover:bg-black/10"
                     variant="secondary"
                     size="lg"
                     disabled={typeof window !== 'undefined' && window.history.length <= 1}
@@ -155,9 +155,7 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
             </>
           ) : (
             <>
-              <p className="text-muted-foreground mt-2 text-sm">
-                Please review the document before signing.
-              </p>
+              <p className=" mt-2 text-sm text-black">Please review the document before signing.</p>
 
               <hr className="border-border mb-8 mt-4" />
 
@@ -179,9 +177,9 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
                     <Label htmlFor="Signature">Signature</Label>
 
                     <Card className="mt-2" gradient degrees={-120}>
-                      <CardContent className="p-0">
+                      <CardContent className="p-0 text-black">
                         <SignaturePad
-                          className="h-44 w-full"
+                          className="h-44 w-full text-black"
                           disabled={isSubmitting}
                           defaultValue={signature ?? undefined}
                           onChange={(value) => {
@@ -196,7 +194,7 @@ export const SigningForm = ({ document, recipient, fields, redirectUrl }: Signin
                 <div className="flex flex-col gap-4 md:flex-row">
                   <Button
                     type="button"
-                    className="dark:bg-muted dark:hover:bg-muted/80 w-full  bg-black/5 hover:bg-black/10"
+                    className="dark:bg-muted dark:hover:bg-muted/80 w-full  bg-black/5 text-white hover:bg-black/10"
                     variant="secondary"
                     size="lg"
                     disabled={typeof window !== 'undefined' && window.history.length <= 1}

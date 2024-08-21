@@ -124,11 +124,7 @@ export const DocumentLogsPageView = async ({ params, team }: DocumentLogsPageVie
           </h1>
 
           <div className="mt-2.5 flex items-center gap-x-6">
-            <DocumentStatusComponent
-              inheritColor
-              status={document.status}
-              className="text-muted-foreground"
-            />
+            <DocumentStatusComponent inheritColor status={document.status} className="text-muted" />
           </div>
         </div>
 
@@ -148,13 +144,13 @@ export const DocumentLogsPageView = async ({ params, team }: DocumentLogsPageVie
           {documentInformation.map((info, i) => (
             <div className="text-foreground text-sm" key={i}>
               <h3 className="font-semibold">{info.description}</h3>
-              <p className="text-muted-foreground">{info.value}</p>
+              <p className="text-muted">{info.value}</p>
             </div>
           ))}
 
           <div className="text-foreground text-sm">
             <h3 className="font-semibold">Recipients</h3>
-            <ul className="text-muted-foreground list-inside list-disc">
+            <ul className="text-muted list-inside list-disc">
               {recipients.map((recipient) => (
                 <li key={`recipient-${recipient.id}`}>
                   <span className="-ml-2">{formatRecipientText(recipient)}</span>

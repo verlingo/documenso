@@ -3,8 +3,6 @@ import { createElement } from 'react';
 import { DateTime } from 'luxon';
 import { match } from 'ts-pattern';
 
-import { mailer } from '@documenso/email/mailer';
-import { render } from '@documenso/email/render';
 import { DocumentCreatedFromDirectTemplateEmailTemplate } from '@documenso/email/templates/document-created-from-direct-template';
 import { nanoid } from '@documenso/lib/universal/id';
 import { prisma } from '@documenso/prisma';
@@ -500,21 +498,21 @@ export const createDocumentFromDirectTemplate = async ({
       assetBaseUrl: NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000',
     });
 
-    await mailer.sendMail({
-      to: [
-        {
-          name: templateOwner.name || '',
-          address: templateOwner.email,
-        },
-      ],
-      from: {
-        name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
-        address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
-      },
-      subject: 'Document created from direct template',
-      html: render(emailTemplate),
-      text: render(emailTemplate, { plainText: true }),
-    });
+    // await mailer.sendMail({
+    //   to: [
+    //     {
+    //       name: templateOwner.name || '',
+    //       address: templateOwner.email,
+    //     },
+    //   ],
+    //   from: {
+    //     name: process.env.NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso',
+    //     address: process.env.NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com',
+    //   },
+    //   subject: 'Document created from direct template',
+    //   html: render(emailTemplate),
+    //   text: render(emailTemplate, { plainText: true }),
+    // });
 
     return {
       documentId: document.id,

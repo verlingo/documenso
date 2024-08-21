@@ -29,7 +29,7 @@ export default async function VerifyTeamTransferPage({
         <div className="w-full">
           <h1 className="text-4xl font-semibold">Invalid link</h1>
 
-          <p className="text-muted-foreground mb-4 mt-2 text-sm">
+          <p className="text-muted mb-4 mt-2 text-sm">
             This link is invalid or has expired. Please contact your team to resend a transfer
             request.
           </p>
@@ -58,7 +58,7 @@ export default async function VerifyTeamTransferPage({
       <div>
         <h1 className="text-4xl font-semibold">Team ownership transfer</h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="text-muted mt-2 text-sm">
           Something went wrong while attempting to transfer the ownership of team{' '}
           <strong>{team.name}</strong> to your. Please try again later or contact support.
         </p>
@@ -70,7 +70,7 @@ export default async function VerifyTeamTransferPage({
     <div>
       <h1 className="text-4xl font-semibold">Team ownership transferred!</h1>
 
-      <p className="text-muted-foreground mb-4 mt-2 text-sm">
+      <p className="text-muted mb-4 mt-2 text-sm">
         The ownership of team <strong>{team.name}</strong> has been successfully transferred to you.
       </p>
 

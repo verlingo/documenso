@@ -38,7 +38,7 @@ const PDFLoader = () => (
   <>
     <Loader className="text-documenso h-12 w-12 animate-spin" />
 
-    <p className="text-muted-foreground mt-4">Loading document...</p>
+    <p className="text-muted mt-4">Loading document...</p>
   </>
 );
 
@@ -173,7 +173,7 @@ export const PDFViewer = ({
       {isLoading ? (
         <div
           className={cn(
-            'flex h-[80vh] max-h-[60rem] w-full flex-col items-center justify-center overflow-hidden rounded',
+            'flex h-[80vh] max-h-[60rem] w-full flex-col items-center justify-center overflow-hidden rounded text-black ',
           )}
         >
           <PDFLoader />
@@ -182,7 +182,7 @@ export const PDFViewer = ({
         <>
           <PDFDocument
             file={documentBytes.buffer}
-            className={cn('w-full overflow-hidden rounded', {
+            className={cn('w-full overflow-hidden rounded ', {
               'h-[80vh] max-h-[60rem]': numPages === 0,
             })}
             onPassword={(callback, reason) => {
@@ -210,7 +210,7 @@ export const PDFViewer = ({
             loading={
               <div className="dark:bg-background flex h-[80vh] max-h-[60rem] flex-col items-center justify-center bg-white/50">
                 {pdfError ? (
-                  <div className="text-muted-foreground text-center">
+                  <div className="text-muted text-center">
                     <p>Something went wrong while loading the document.</p>
                     <p className="mt-1 text-sm">Please try again or contact our support.</p>
                   </div>
@@ -221,7 +221,7 @@ export const PDFViewer = ({
             }
             error={
               <div className="dark:bg-background flex h-[80vh] max-h-[60rem] flex-col items-center justify-center bg-white/50">
-                <div className="text-muted-foreground text-center">
+                <div className="text-muted text-center">
                   <p>Something went wrong while loading the document.</p>
                   <p className="mt-1 text-sm">Please try again or contact our support.</p>
                 </div>
@@ -242,7 +242,7 @@ export const PDFViewer = ({
                       onClick={(e) => onDocumentPageClick(e, i + 1)}
                     />
                   </div>
-                  <p className="text-muted-foreground/80 my-2 text-center text-[11px]">
+                  <p className="text-muted/80 my-2 text-center text-[11px]">
                     Page {i + 1} of {numPages}
                   </p>
                 </div>

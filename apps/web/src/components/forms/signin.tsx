@@ -319,7 +319,7 @@ export const SignInForm = ({
                 <p className="mt-2 text-right">
                   <Link
                     href="/forgot-password"
-                    className="text-muted-foreground text-sm duration-200 hover:opacity-70"
+                    className="text-muted text-sm duration-200 hover:opacity-70"
                   >
                     Forgot your password?
                   </Link>
@@ -340,7 +340,7 @@ export const SignInForm = ({
           {(isGoogleSSOEnabled || isPasskeyEnabled || isOIDCSSOEnabled) && (
             <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
               <div className="bg-border h-px flex-1" />
-              <span className="text-muted-foreground bg-transparent">Or continue with</span>
+              <span className="text-muted bg-transparent">Or continue with</span>
               <div className="bg-border h-px flex-1" />
             </div>
           )}
@@ -350,7 +350,7 @@ export const SignInForm = ({
               type="button"
               size="lg"
               variant="outline"
-              className="bg-background text-muted-foreground border"
+              className="bg-background text-muted border"
               disabled={isSubmitting}
               onClick={onSignInWithGoogleClick}
             >
@@ -364,7 +364,7 @@ export const SignInForm = ({
               type="button"
               size="lg"
               variant="outline"
-              className="bg-background text-muted-foreground border"
+              className="bg-background text-muted border"
               disabled={isSubmitting}
               onClick={onSignInWithOIDCClick}
             >
@@ -380,7 +380,7 @@ export const SignInForm = ({
               variant="outline"
               disabled={isSubmitting}
               loading={isPasskeyLoading}
-              className="bg-background text-muted-foreground border"
+              className="bg-background text-muted border"
               onClick={onSignInWithPasskey}
             >
               {!isPasskeyLoading && <KeyRoundIcon className="-ml-1 mr-1 h-5 w-5" />}

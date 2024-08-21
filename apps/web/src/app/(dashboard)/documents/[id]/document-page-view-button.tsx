@@ -71,12 +71,12 @@ export const DocumentPageViewButton = ({ document, team }: DocumentPageViewButto
     isSigned,
   })
     .with({ isRecipient: true, isPending: true, isSigned: false }, () => (
-      <Button className="w-full" asChild>
+      <Button className="w-full text-white" asChild>
         <Link href={`/sign/${recipient?.token}`}>
           {match(role)
             .with(RecipientRole.SIGNER, () => (
               <>
-                <Pencil className="-ml-1 mr-2 h-4 w-4" />
+                <Pencil className="-ml-1 mr-2 h-4 w-4 text-white" />
                 Sign
               </>
             ))

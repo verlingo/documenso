@@ -36,7 +36,7 @@ export default async function ApiTokensPage({ params }: ApiTokensPageProps) {
     return (
       <div>
         <h3 className="text-2xl font-semibold">API Tokens</h3>
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="text-muted mt-2 text-sm">
           {match(error.code)
             .with(AppErrorCode.UNAUTHORIZED, () => error.message)
             .otherwise(() => 'Something went wrong.')}
@@ -49,7 +49,7 @@ export default async function ApiTokensPage({ params }: ApiTokensPageProps) {
     <div>
       <h3 className="text-2xl font-semibold">API Tokens</h3>
 
-      <p className="text-muted-foreground mt-2 text-sm">
+      <p className="text-muted mt-2 text-sm">
         On this page, you can create new API tokens and manage the existing ones. <br />
         You can view our swagger docs{' '}
         <a
@@ -71,7 +71,7 @@ export default async function ApiTokensPage({ params }: ApiTokensPageProps) {
 
       {tokens.length === 0 && (
         <div className="mb-4">
-          <p className="text-muted-foreground mt-2 text-sm italic">
+          <p className="text-muted mt-2 text-sm italic">
             Your tokens will be shown here once you create them.
           </p>
         </div>
@@ -85,17 +85,15 @@ export default async function ApiTokensPage({ params }: ApiTokensPageProps) {
                 <div>
                   <h5 className="text-base">{token.name}</h5>
 
-                  <p className="text-muted-foreground mt-2 text-xs">
+                  <p className="text-muted mt-2 text-xs">
                     Created on <LocaleDate date={token.createdAt} format={DateTime.DATETIME_FULL} />
                   </p>
                   {token.expires ? (
-                    <p className="text-muted-foreground mt-1 text-xs">
+                    <p className="text-muted mt-1 text-xs">
                       Expires on <LocaleDate date={token.expires} format={DateTime.DATETIME_FULL} />
                     </p>
                   ) : (
-                    <p className="text-muted-foreground mt-1 text-xs">
-                      Token doesn't have an expiration date
-                    </p>
+                    <p className="text-muted mt-1 text-xs">Token doesn't have an expiration date</p>
                   )}
                 </div>
 

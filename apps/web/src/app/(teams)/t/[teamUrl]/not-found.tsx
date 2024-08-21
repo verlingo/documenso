@@ -10,11 +10,11 @@ export default function NotFound() {
   return (
     <div className="mx-auto flex min-h-[80vh] w-full items-center justify-center py-32">
       <div>
-        <p className="text-muted-foreground font-semibold">404 Team not found</p>
+        <p className="text-muted font-semibold">404 Team not found</p>
 
         <h1 className="mt-3 text-2xl font-bold md:text-3xl">Oops! Something went wrong.</h1>
 
-        <p className="text-muted-foreground mt-4 text-sm">
+        <p className="text-muted mt-4 text-sm">
           The team you are looking for may have been removed, renamed or may have never existed.
         </p>
 

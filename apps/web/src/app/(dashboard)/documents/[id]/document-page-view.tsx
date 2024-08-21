@@ -117,14 +117,10 @@ export const DocumentPageView = async ({ params, team }: DocumentPageViewProps) 
           </h1>
 
           <div className="mt-2.5 flex items-center gap-x-6">
-            <DocumentStatusComponent
-              inheritColor
-              status={document.status}
-              className="text-muted-foreground"
-            />
+            <DocumentStatusComponent inheritColor status={document.status} className="text-muted" />
 
             {recipients.length > 0 && (
-              <div className="text-muted-foreground flex items-center">
+              <div className="text-muted flex items-center">
                 <Users2 className="mr-2 h-5 w-5" />
 
                 <StackAvatarsWithTooltip
@@ -178,7 +174,7 @@ export const DocumentPageView = async ({ params, team }: DocumentPageViewProps) 
                 <DocumentPageViewDropdown document={documentWithRecipients} team={team} />
               </div>
 
-              <p className="text-muted-foreground mt-2 px-4 text-sm ">
+              <p className="text-muted mt-2 px-4 text-sm ">
                 {match(document.status)
                   .with(
                     DocumentStatus.COMPLETED,

@@ -92,7 +92,7 @@ export const TemplatesDataTable = ({
                   </TooltipTrigger>
 
                   <TooltipContent className="text-foreground max-w-md space-y-2 !p-0">
-                    <ul className="text-muted-foreground space-y-0.5 divide-y [&>li]:p-4">
+                    <ul className="text-muted space-y-0.5 divide-y [&>li]:p-4">
                       <li>
                         <h2 className="mb-2 flex flex-row items-center font-semibold">
                           <Globe2Icon className="mr-2 h-5 w-5 text-green-500 dark:text-green-300" />

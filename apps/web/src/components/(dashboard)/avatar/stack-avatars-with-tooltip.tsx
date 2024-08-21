@@ -59,8 +59,8 @@ export const StackAvatarsWithTooltip = ({
                 fallbackText={recipientAbbreviation(recipient)}
               />
               <div className="">
-                <p className="text-muted-foreground text-sm">{recipient.email}</p>
-                <p className="text-muted-foreground/70 text-xs">
+                <p className="text-muted text-sm">{recipient.email}</p>
+                <p className="text-muted/70 text-xs">
                   {RECIPIENT_ROLES_DESCRIPTION[recipient.role].roleName}
                 </p>
               </div>

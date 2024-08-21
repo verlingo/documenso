@@ -21,7 +21,7 @@ export type RecipientActionAuthSelectProps = SelectProps;
 export const RecipientActionAuthSelect = (props: RecipientActionAuthSelectProps) => {
   return (
     <Select {...props}>
-      <SelectTrigger className="bg-background text-muted-foreground">
+      <SelectTrigger className="bg-background text-muted">
         <SelectValue placeholder="Inherit authentication method" />
 
         <Tooltip>

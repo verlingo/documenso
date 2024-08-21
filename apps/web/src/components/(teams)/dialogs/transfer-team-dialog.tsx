@@ -169,7 +169,7 @@ export const TransferTeamDialog = ({
                       <FormLabel required>New team owner</FormLabel>
                       <FormControl>
                         <Select {...field} onValueChange={field.onChange}>
-                          <SelectTrigger className="text-muted-foreground">
+                          <SelectTrigger className="text-muted">
                             <SelectValue />
                           </SelectTrigger>
 
@@ -224,7 +224,7 @@ export const TransferTeamDialog = ({
                           />
 
                           <label
-                            className="text-muted-foreground ml-2 text-sm"
+                            className="text-muted ml-2 text-sm"
                             htmlFor="clearPaymentMethods"
                           >
                             Clear current payment methods
@@ -275,10 +275,10 @@ export const TransferTeamDialog = ({
       ) : (
         <DialogContent
           position="center"
-          className="text-muted-foreground flex items-center justify-center py-16 text-sm"
+          className="text-muted flex items-center justify-center py-16 text-sm"
         >
           {loadingTeamMembers ? (
-            <Loader className="text-muted-foreground h-6 w-6 animate-spin" />
+            <Loader className="text-muted h-6 w-6 animate-spin" />
           ) : (
             <p className="text-center text-sm">
               {loadingTeamMembersError

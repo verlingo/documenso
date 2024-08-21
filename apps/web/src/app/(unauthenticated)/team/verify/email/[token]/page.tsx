@@ -26,7 +26,7 @@ export default async function VerifyTeamEmailPage({ params: { token } }: VerifyT
         <div className="w-full">
           <h1 className="text-4xl font-semibold">Invalid link</h1>
 
-          <p className="text-muted-foreground mb-4 mt-2 text-sm">
+          <p className="text-muted mb-4 mt-2 text-sm">
             This link is invalid or has expired. Please contact your team to resend a verification.
           </p>
 
@@ -67,7 +67,7 @@ export default async function VerifyTeamEmailPage({ params: { token } }: VerifyT
       <div>
         <h1 className="text-4xl font-semibold">Team email verification</h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="text-muted mt-2 text-sm">
           Something went wrong while attempting to verify your email address for{' '}
           <strong>{team.name}</strong>. Please try again later.
         </p>
@@ -79,7 +79,7 @@ export default async function VerifyTeamEmailPage({ params: { token } }: VerifyT
     <div>
       <h1 className="text-4xl font-semibold">Team email verified!</h1>
 
-      <p className="text-muted-foreground mb-4 mt-2 text-sm">
+      <p className="text-muted mb-4 mt-2 text-sm">
         You have verified your email address for <strong>{team.name}</strong>.
       </p>
 

@@ -21,7 +21,7 @@ export default async function VerifyEmailPage({ params: { token } }: PageProps) 
           </div>
 
           <h2 className="text-4xl font-semibold">No token provided</h2>
-          <p className="text-muted-foreground mt-2 text-base">
+          <p className="text-muted mt-2 text-base">
             It seems that there is no token provided. Please check your email and try again.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default async function VerifyEmailPage({ params: { token } }: PageProps) 
           <div>
             <h2 className="text-2xl font-bold md:text-4xl">Something went wrong</h2>
 
-            <p className="text-muted-foreground mt-4">
+            <p className="text-muted mt-4">
               We were unable to verify your email. If your email is not verified already, please try
               again.
             </p>
@@ -67,7 +67,7 @@ export default async function VerifyEmailPage({ params: { token } }: PageProps) 
           <div>
             <h2 className="text-2xl font-bold md:text-4xl">Your token has expired!</h2>
 
-            <p className="text-muted-foreground mt-4">
+            <p className="text-muted mt-4">
               It seems that the provided token has expired. We've just sent you another token,
               please check your email and try again.
             </p>
@@ -91,7 +91,7 @@ export default async function VerifyEmailPage({ params: { token } }: PageProps) 
         <div>
           <h2 className="text-2xl font-bold md:text-4xl">Email Confirmed!</h2>
 
-          <p className="text-muted-foreground mt-4">
+          <p className="text-muted mt-4">
             Your email has been successfully confirmed! You can now use all features of Documenso.
           </p>
 

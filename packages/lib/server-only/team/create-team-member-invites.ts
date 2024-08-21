@@ -2,12 +2,9 @@ import { createElement } from 'react';
 
 import { nanoid } from 'nanoid';
 
-import { mailer } from '@documenso/email/mailer';
-import { render } from '@documenso/email/render';
 import type { TeamInviteEmailProps } from '@documenso/email/templates/team-invite';
 import { TeamInviteEmailTemplate } from '@documenso/email/templates/team-invite';
 import { WEBAPP_BASE_URL } from '@documenso/lib/constants/app';
-import { FROM_ADDRESS, FROM_NAME } from '@documenso/lib/constants/email';
 import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/teams';
 import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
 import { isTeamRoleWithinUserHierarchy } from '@documenso/lib/utils/teams';
@@ -148,14 +145,14 @@ export const sendTeamMemberInviteEmail = async ({
     ...emailTemplateOptions,
   });
 
-  await mailer.sendMail({
-    to: email,
-    from: {
-      name: FROM_NAME,
-      address: FROM_ADDRESS,
-    },
-    subject: `You have been invited to join ${emailTemplateOptions.teamName} on Documenso`,
-    html: render(template),
-    text: render(template, { plainText: true }),
-  });
+  // await mailer.sendMail({
+  //   to: email,
+  //   from: {
+  //     name: FROM_NAME,
+  //     address: FROM_ADDRESS,
+  //   },
+  //   subject: `You have been invited to join ${emailTemplateOptions.teamName} on Documenso`,
+  //   html: render(template),
+  //   text: render(template, { plainText: true }),
+  // });
 };

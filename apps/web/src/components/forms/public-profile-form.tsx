@@ -144,7 +144,7 @@ export const PublicProfileForm = ({
                 </FormControl>
 
                 {teamUrl && (
-                  <p className="text-muted-foreground text-xs">
+                  <p className="text-muted text-xs">
                     You can update the profile URL by updating the team URL in the general settings
                     page.
                   </p>
@@ -152,7 +152,7 @@ export const PublicProfileForm = ({
 
                 <div className="h-8">
                   {!form.formState.errors.url && (
-                    <div className="text-muted-foreground h-8 text-sm">
+                    <div className="text-muted h-8 text-sm">
                       {field.value ? (
                         <div>
                           <Button
@@ -215,7 +215,7 @@ export const PublicProfileForm = ({
                   </FormControl>
 
                   {!form.formState.errors.bio && (
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted text-sm">
                       {remaningLength >= 0
                         ? `${remaningLength} ${pluralWord} remaining`
                         : `${Math.abs(remaningLength)} ${pluralWord} over the limit`}

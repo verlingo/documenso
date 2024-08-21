@@ -171,7 +171,7 @@ export const AddTemplateSettingsFormPartial = ({
                   Email Options
                 </AccordionTrigger>
 
-                <AccordionContent className="text-muted-foreground -mx-1 px-1 pt-4 text-sm leading-relaxed [&>div]:pb-0">
+                <AccordionContent className="text-muted -mx-1 px-1 pt-4 text-sm leading-relaxed [&>div]:pb-0">
                   <div className="flex flex-col space-y-6">
                     <FormField
                       control={form.control}
@@ -179,7 +179,7 @@ export const AddTemplateSettingsFormPartial = ({
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>
-                            Subject <span className="text-muted-foreground">(Optional)</span>
+                            Subject <span className="text-muted">(Optional)</span>
                           </FormLabel>
 
                           <FormControl>
@@ -197,7 +197,7 @@ export const AddTemplateSettingsFormPartial = ({
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>
-                            Message <span className="text-muted-foreground">(Optional)</span>
+                            Message <span className="text-muted">(Optional)</span>
                           </FormLabel>
 
                           <FormControl>
@@ -221,7 +221,7 @@ export const AddTemplateSettingsFormPartial = ({
                   Advanced Options
                 </AccordionTrigger>
 
-                <AccordionContent className="text-muted-foreground -mx-1 px-1 pt-4 text-sm leading-relaxed">
+                <AccordionContent className="text-muted -mx-1 px-1 pt-4 text-sm leading-relaxed">
                   <div className="flex flex-col space-y-6">
                     <FormField
                       control={form.control}
@@ -284,7 +284,7 @@ export const AddTemplateSettingsFormPartial = ({
                                 <InfoIcon className="mx-2 h-4 w-4" />
                               </TooltipTrigger>
 
-                              <TooltipContent className="text-muted-foreground max-w-xs">
+                              <TooltipContent className="text-muted max-w-xs">
                                 Add a URL to redirect the user to once the document is signed
                               </TooltipContent>
                             </Tooltip>

@@ -56,7 +56,7 @@ export const TeamBillingInvoicesDataTable = ({ teamId }: TeamBillingInvoicesData
                 <span className="text-foreground/80 font-semibold">
                   {DateTime.fromSeconds(row.original.created).toFormat('MMMM yyyy')}
                 </span>
-                <span className="text-muted-foreground">
+                <span className="text-muted">
                   {row.original.quantity} {row.original.quantity > 1 ? 'Seats' : 'Seat'}
                 </span>
               </div>

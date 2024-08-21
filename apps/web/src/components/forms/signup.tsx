@@ -223,7 +223,7 @@ export const SignUpForm = ({
           <>
             <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
               <div className="bg-border h-px flex-1" />
-              <span className="text-muted-foreground bg-transparent">Or</span>
+              <span className="text-muted bg-transparent">Or</span>
               <div className="bg-border h-px flex-1" />
             </div>
 
@@ -231,7 +231,7 @@ export const SignUpForm = ({
               type="button"
               size="lg"
               variant={'outline'}
-              className="bg-background text-muted-foreground border"
+              className="bg-background text-muted border"
               disabled={isSubmitting}
               onClick={onSignUpWithGoogleClick}
             >
@@ -245,7 +245,7 @@ export const SignUpForm = ({
           <>
             <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
               <div className="bg-border h-px flex-1" />
-              <span className="text-muted-foreground bg-transparent">Or</span>
+              <span className="text-muted bg-transparent">Or</span>
               <div className="bg-border h-px flex-1" />
             </div>
 
@@ -253,7 +253,7 @@ export const SignUpForm = ({
               type="button"
               size="lg"
               variant={'outline'}
-              className="bg-background text-muted-foreground border"
+              className="bg-background text-muted border"
               disabled={isSubmitting}
               onClick={onSignUpWithOIDCClick}
             >

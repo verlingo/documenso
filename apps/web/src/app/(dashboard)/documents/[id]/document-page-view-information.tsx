@@ -53,7 +53,7 @@ export const DocumentPageViewInformation = ({
   }, [isMounted, document, locale, userId]);
 
   return (
-    <section className="dark:bg-background text-foreground border-border bg-widget flex flex-col rounded-xl border">
+    <section className=" text-foreground border-border bg-widget flex flex-col rounded-xl border">
       <h1 className="px-4 py-3 font-medium">Information</h1>
 
       <ul className="divide-y border-t">
@@ -62,7 +62,7 @@ export const DocumentPageViewInformation = ({
             key={item.description}
             className="flex items-center justify-between px-4 py-2.5 text-sm last:border-b"
           >
-            <span className="text-muted-foreground">{item.description}</span>
+            <span className="text-muted">{item.description}</span>
             <span>{item.value}</span>
           </li>
         ))}
