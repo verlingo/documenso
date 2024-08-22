@@ -11,6 +11,7 @@ import { deleteTemplate } from '@documenso/lib/server-only/template/delete-templ
 import { deleteTemplateDirectLink } from '@documenso/lib/server-only/template/delete-template-direct-link';
 import { duplicateTemplate } from '@documenso/lib/server-only/template/duplicate-template';
 import { findTemplates } from '@documenso/lib/server-only/template/find-templates';
+import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
 import { getTemplateWithDetailsById } from '@documenso/lib/server-only/template/get-template-with-details-by-id';
 import { moveTemplateToTeam } from '@documenso/lib/server-only/template/move-template-to-team';
 import { toggleTemplateDirectLink } from '@documenso/lib/server-only/template/toggle-template-direct-link';
@@ -65,6 +66,7 @@ export const templateRouter = router({
           directRecipientName,
           directRecipientEmail,
           directTemplateToken,
+          directTemplateExternalId,
           signedFieldValues,
           templateUpdatedAt,
         } = input;
@@ -75,6 +77,7 @@ export const templateRouter = router({
           directRecipientName,
           directRecipientEmail,
           directTemplateToken,
+          directTemplateExternalId,
           signedFieldValues,
           templateUpdatedAt,
           user: ctx.user
@@ -99,7 +102,7 @@ export const templateRouter = router({
       try {
         const { templateId, teamId } = input;
 
-        const limits = await getServerLimits({ email: ctx.user.email });
+        const limits = await getServerLimits({ email: ctx.user.email, teamId });
 
         if (limits.remaining.documents === 0) {
           throw new Error('You have reached your document limit.');
@@ -243,11 +246,13 @@ export const templateRouter = router({
     .input(ZCreateTemplateDirectLinkMutationSchema)
     .mutation(async ({ input, ctx }) => {
       try {
-        const { templateId, directRecipientId } = input;
+        const { templateId, teamId, directRecipientId } = input;
 
         const userId = ctx.user.id;
 
-        const limits = await getServerLimits({ email: ctx.user.email });
+        const template = await getTemplateById({ id: templateId, teamId, userId: ctx.user.id });
+
+        const limits = await getServerLimits({ email: ctx.user.email, teamId: template.teamId });
 
         if (limits.remaining.directTemplates === 0) {
           throw new AppError(

@@ -35,6 +35,7 @@ export const ZDocumentAuditLogTypeSchema = z.enum([
   'DOCUMENT_RECIPIENT_COMPLETED', // When a recipient completes all their required tasks for the document.
   'DOCUMENT_SENT', // When the document transitions from DRAFT to PENDING.
   'DOCUMENT_TITLE_UPDATED', // When the document title is updated.
+  'DOCUMENT_EXTERNAL_ID_UPDATED', // When the document external ID is updated.
   'DOCUMENT_MOVED_TO_TEAM', // When the document is moved to a team.
 ]);
 
@@ -233,6 +234,10 @@ export const ZDocumentAuditLogEventDocumentFieldInsertedSchema = z.object({
     // Organised into union to allow us to extend each field if required.
     field: z.union([
       z.object({
+        type: z.literal(FieldType.INITIALS),
+        data: z.string(),
+      }),
+      z.object({
         type: z.literal(FieldType.EMAIL),
         data: z.string(),
       }),
@@ -250,6 +255,22 @@ export const ZDocumentAuditLogEventDocumentFieldInsertedSchema = z.object({
       }),
       z.object({
         type: z.union([z.literal(FieldType.SIGNATURE), z.literal(FieldType.FREE_SIGNATURE)]),
+        data: z.string(),
+      }),
+      z.object({
+        type: z.literal(FieldType.RADIO),
+        data: z.string(),
+      }),
+      z.object({
+        type: z.literal(FieldType.CHECKBOX),
+        data: z.string(),
+      }),
+      z.object({
+        type: z.literal(FieldType.DROPDOWN),
+        data: z.string(),
+      }),
+      z.object({
+        type: z.literal(FieldType.NUMBER),
         data: z.string(),
       }),
     ]),
@@ -356,6 +377,17 @@ export const ZDocumentAuditLogEventDocumentTitleUpdatedSchema = z.object({
 });
 
 /**
+ * Event: Document external ID updated.
+ */
+export const ZDocumentAuditLogEventDocumentExternalIdUpdatedSchema = z.object({
+  type: z.literal(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_EXTERNAL_ID_UPDATED),
+  data: z.object({
+    from: z.string().nullish(),
+    to: z.string().nullish(),
+  }),
+});
+
+/**
  * Event: Field created.
  */
 export const ZDocumentAuditLogEventFieldCreatedSchema = z.object({
@@ -450,6 +482,7 @@ export const ZDocumentAuditLogSchema = ZDocumentAuditLogBaseSchema.and(
     ZDocumentAuditLogEventDocumentRecipientCompleteSchema,
     ZDocumentAuditLogEventDocumentSentSchema,
     ZDocumentAuditLogEventDocumentTitleUpdatedSchema,
+    ZDocumentAuditLogEventDocumentExternalIdUpdatedSchema,
     ZDocumentAuditLogEventFieldCreatedSchema,
     ZDocumentAuditLogEventFieldRemovedSchema,
     ZDocumentAuditLogEventFieldUpdatedSchema,
