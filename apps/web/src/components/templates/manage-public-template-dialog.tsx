@@ -262,7 +262,7 @@ export const ManagePublicTemplateDialog = ({
                       {directTemplates.length === 0 && (
                         <TableRow>
                           <TableCell colSpan={3} className="h-16 text-center">
-                            <p className="text-muted">No valid direct templates found</p>
+                            <p className="text-muted-foreground">No valid direct templates found</p>
                           </TableCell>
                         </TableRow>
                       )}
@@ -273,11 +273,11 @@ export const ManagePublicTemplateDialog = ({
                           key={row.id}
                           onClick={() => setSelectedTemplateId(row.id)}
                         >
-                          <TableCell className="text-muted max-w-[30ch] text-sm">
+                          <TableCell className="text-muted-foreground max-w-[30ch] text-sm">
                             {row.title}
                           </TableCell>
 
-                          <TableCell className="text-muted text-sm">
+                          <TableCell className="text-muted-foreground text-sm">
                             <LocaleDate date={row.createdAt} />
                           </TableCell>
 
@@ -357,7 +357,7 @@ export const ManagePublicTemplateDialog = ({
                             </FormControl>
 
                             {!form.formState.errors.publicDescription && (
-                              <p className="text-muted text-sm">
+                              <p className="text-muted-foreground text-sm">
                                 {remaningLength >= 0
                                   ? `${remaningLength} ${pluralWord} remaining`
                                   : `${Math.abs(remaningLength)} ${pluralWord} over the limit`}

@@ -68,7 +68,7 @@ export default async function BillingSettingsPage() {
     <div>
       <h3 className="text-2xl font-semibold">Billing</h3>
 
-      <div className="text-muted mt-2 text-sm">
+      <div className="text-muted-foreground mt-2 text-sm">
         {isMissingOrInactiveOrFreePlan && (
           <p>
             You are currently on the <span className="font-semibold">Free Plan</span>.

@@ -52,7 +52,7 @@ export const SigningAuthPageView = ({ email, emailHasAccount }: SigningAuthPageV
       <div>
         <h1 className="text-3xl font-semibold">Authentication required</h1>
 
-        <p className="text-muted mt-2 text-sm">
+        <p className="text-muted-foreground mt-2 text-sm">
           You need to be logged in as <strong>{email}</strong> to view this page.
         </p>
 

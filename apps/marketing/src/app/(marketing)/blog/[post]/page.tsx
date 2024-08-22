@@ -59,7 +59,7 @@ export default function BlogPostPage({ params }: { params: { post: string } }) {
     <div>
       <article className="prose dark:prose-invert mx-auto py-8">
         <div className="mb-6 text-center">
-          <time dateTime={post.date} className="text-muted mb-1 text-xs">
+          <time dateTime={post.date} className="text-muted-foreground mb-1 text-xs">
             {new Date(post.date).toLocaleDateString()}
           </time>
 
@@ -78,7 +78,7 @@ export default function BlogPostPage({ params }: { params: { post: string } }) {
 
             <div className="text-sm leading-6">
               <p className="text-foreground text-left font-semibold">{post.authorName}</p>
-              <p className="text-muted">{post.authorRole}</p>
+              <p className="text-muted-foreground">{post.authorRole}</p>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function BlogPostPage({ params }: { params: { post: string } }) {
 
         <hr />
 
-        <Link href="/blog" className="text-muted flex items-center hover:opacity-60">
+        <Link href="/blog" className="text-muted-foreground flex items-center hover:opacity-60">
           <ChevronLeft className="mr-2 h-6 w-6" />
           Back to all posts
         </Link>

@@ -26,11 +26,11 @@ export default function ErrorPage({ error }: ErrorProps) {
   return (
     <div className="mx-auto flex min-h-[80vh] w-full items-center justify-center py-32">
       <div>
-        <p className="text-muted font-semibold">{errorMessage}</p>
+        <p className="text-muted-foreground font-semibold">{errorMessage}</p>
 
         <h1 className="mt-3 text-2xl font-bold md:text-3xl">Oops! Something went wrong.</h1>
 
-        <p className="text-muted mt-4 text-sm">{errorDetails}</p>
+        <p className="text-muted-foreground mt-4 text-sm">{errorDetails}</p>
 
         <div className="mt-6 flex gap-x-2.5 gap-y-4 md:items-center">
           <Button

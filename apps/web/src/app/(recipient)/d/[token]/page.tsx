@@ -72,9 +72,9 @@ export default async function TemplatesDirectPage({ params }: TemplatesDirectPag
             {truncateTitle(template.title)}
           </h1>
 
-          <div className="text-muted mb-8 mt-2.5 flex items-center gap-x-2">
+          <div className="text-muted-foreground mb-8 mt-2.5 flex items-center gap-x-2">
             <UsersIcon className="h-4 w-4" />
-            <p className="text-muted/80">
+            <p className="text-muted-foreground/80">
               {template.Recipient.length}{' '}
               {template.Recipient.length > 1 ? 'recipients' : 'recipient'}
             </p>

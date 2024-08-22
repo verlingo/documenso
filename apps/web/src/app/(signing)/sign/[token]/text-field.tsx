@@ -163,15 +163,15 @@ export const TextField = ({ field, recipient, onSignField, onUnsignField }: Text
       )}
 
       {!field.inserted && (
-        <p className="group-hover:text-primary text-muted text-lg duration-200">Text</p>
+        <p className="group-hover:text-primary text-muted-foreground text-lg duration-200">Text</p>
       )}
 
-      {field.inserted && <p className="text-muted duration-200">{field.customText}</p>}
+      {field.inserted && <p className="text-muted-foreground duration-200">{field.customText}</p>}
 
       <Dialog open={showCustomTextModal} onOpenChange={setShowCustomTextModal}>
         <DialogContent>
           <DialogTitle>
-            Enter your Text <span className="text-muted">({recipient.email})</span>
+            Enter your Text <span className="text-muted-foreground">({recipient.email})</span>
           </DialogTitle>
 
           <div className="">

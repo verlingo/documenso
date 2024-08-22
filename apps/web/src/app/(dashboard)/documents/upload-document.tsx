@@ -136,7 +136,7 @@ export const UploadDocument = ({ className, team }: UploadDocumentProps) => {
         {team?.id === undefined &&
           remaining.documents > 0 &&
           Number.isFinite(remaining.documents) && (
-            <p className="text-muted/60 text-xs">
+            <p className="text-muted-foreground/60 text-xs">
               {remaining.documents} of {quota.documents} documents remaining this month.
             </p>
           )}
@@ -144,7 +144,7 @@ export const UploadDocument = ({ className, team }: UploadDocumentProps) => {
 
       {isLoading && (
         <div className="bg-background/50 absolute inset-0 flex items-center justify-center rounded-lg">
-          <Loader className="text-muted h-12 w-12 animate-spin" />
+          <Loader className="text-muted-foreground h-12 w-12 animate-spin" />
         </div>
       )}
     </div>

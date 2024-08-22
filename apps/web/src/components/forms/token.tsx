@@ -140,7 +140,7 @@ export const ApiTokenForm = ({ className, teamId }: ApiTokenFormProps) => {
               name="tokenName"
               render={({ field }) => (
                 <FormItem className="flex-1">
-                  <FormLabel className="text-muted">Token name</FormLabel>
+                  <FormLabel className="text-muted-foreground">Token name</FormLabel>
 
                   <div className="flex items-center gap-x-4">
                     <FormControl className="flex-1">
@@ -164,7 +164,7 @@ export const ApiTokenForm = ({ className, teamId }: ApiTokenFormProps) => {
                 name="expirationDate"
                 render={({ field }) => (
                   <FormItem className="flex-1">
-                    <FormLabel className="text-muted">Token expiration date</FormLabel>
+                    <FormLabel className="text-muted-foreground">Token expiration date</FormLabel>
 
                     <div className="flex items-center gap-x-4">
                       <FormControl className="flex-1">
@@ -193,7 +193,7 @@ export const ApiTokenForm = ({ className, teamId }: ApiTokenFormProps) => {
                 name="enabled"
                 render={({ field }) => (
                   <FormItem className="">
-                    <FormLabel className="text-muted mt-2">Never expire</FormLabel>
+                    <FormLabel className="text-muted-foreground mt-2">Never expire</FormLabel>
                     <FormControl>
                       <div className="block md:py-1.5">
                         <Switch
@@ -237,7 +237,7 @@ export const ApiTokenForm = ({ className, teamId }: ApiTokenFormProps) => {
       {newlyCreatedToken && (
         <Card className="mt-8" gradient>
           <CardContent className="p-4">
-            <p className="text-muted mt-2 text-sm">
+            <p className="text-muted-foreground mt-2 text-sm">
               Your token was created successfully! Make sure to copy it because you won't be able to
               see it again!
             </p>

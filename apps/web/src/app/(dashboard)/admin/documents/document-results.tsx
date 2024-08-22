@@ -115,7 +115,7 @@ export const AdminDocumentResults = () => {
                         </AvatarFallback>
                       </Avatar>
 
-                      <div className="text-muted flex flex-col text-sm">
+                      <div className="text-muted-foreground flex flex-col text-sm">
                         <span>{row.original.User.name}</span>
                         <span>{row.original.User.email}</span>
                       </div>

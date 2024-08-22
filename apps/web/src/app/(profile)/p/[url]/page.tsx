@@ -101,7 +101,7 @@ export default async function PublicProfilePage({ params }: PublicProfilePagePro
                   <p className="text-foreground text-base font-semibold">
                     {BADGE_DATA[publicProfile.badge.type].name}
                   </p>
-                  <p className="text-muted mt-0.5 text-sm">
+                  <p className="text-muted-foreground mt-0.5 text-sm">
                     Since {DateTime.fromJSDate(publicProfile.badge.since).toFormat('LLL ‘yy')}
                   </p>
                 </div>
@@ -110,7 +110,7 @@ export default async function PublicProfilePage({ params }: PublicProfilePagePro
           )}
         </div>
 
-        <div className="text-muted mt-4 space-y-1">
+        <div className="text-muted-foreground mt-4 space-y-1">
           {(profile.bio ?? '').split('\n').map((line, index) => (
             <p
               key={index}
@@ -124,7 +124,7 @@ export default async function PublicProfilePage({ params }: PublicProfilePagePro
 
       {templates.length === 0 && (
         <div className="mt-4 w-full max-w-xl border-t pt-4">
-          <p className="text-muted max-w-[60ch] whitespace-pre-wrap break-words text-center text-sm leading-relaxed">
+          <p className="text-muted-foreground max-w-[60ch] whitespace-pre-wrap break-words text-center text-sm leading-relaxed">
             It looks like {publicProfile.name} hasn't added any documents to their profile yet.{' '}
             {!user?.id && (
               <span className="mt-2 inline-block">
@@ -158,16 +158,19 @@ export default async function PublicProfilePage({ params }: PublicProfilePagePro
             <TableBody>
               {templates.map((template) => (
                 <TableRow key={template.id}>
-                  <TableCell className="text-muted flex flex-col justify-between overflow-hidden text-sm sm:flex-row">
+                  <TableCell className="text-muted-foreground flex flex-col justify-between overflow-hidden text-sm sm:flex-row">
                     <div className="flex flex-1 items-start justify-start gap-2">
-                      <FileIcon className="text-muted/40 h-8 w-8 flex-shrink-0" strokeWidth={1.5} />
+                      <FileIcon
+                        className="text-muted-foreground/40 h-8 w-8 flex-shrink-0"
+                        strokeWidth={1.5}
+                      />
 
                       <div className="flex flex-1 flex-col gap-4 overflow-hidden md:flex-row md:items-start md:justify-between">
                         <div>
                           <p className="text-foreground text-sm font-semibold leading-none">
                             {template.publicTitle}
                           </p>
-                          <p className="text-muted mt-1 line-clamp-3 max-w-[70ch] whitespace-normal text-xs">
+                          <p className="text-muted-foreground mt-1 line-clamp-3 max-w-[70ch] whitespace-normal text-xs">
                             {template.publicDescription}
                           </p>
                         </div>

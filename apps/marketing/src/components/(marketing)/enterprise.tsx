@@ -15,7 +15,7 @@ export const Enterprise = () => {
         Enterprise Compliance, License or Technical Needs?
       </h2>
 
-      <p className="text-muted mt-4 text-center leading-relaxed">
+      <p className="text-muted-foreground mt-4 text-center leading-relaxed">
         Our Enterprise License is great large organizations looking to switch to Documenso for all
         their signing needs. It's availible for our cloud offering as well as self-hosted setups and
         offer a wide range of compliance and Adminstration Features.

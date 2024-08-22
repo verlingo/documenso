@@ -62,7 +62,7 @@ export const AuditLogDataTable = ({ logs }: AuditLogDataTableProps) => {
                   )}
 
                   {log.email && (
-                    <p className="text-muted break-all" title={log.email}>
+                    <p className="text-muted-foreground break-all" title={log.email}>
                       {log.email}
                     </p>
                   )}

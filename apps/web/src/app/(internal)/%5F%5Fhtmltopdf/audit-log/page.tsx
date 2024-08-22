@@ -112,7 +112,7 @@ export default async function AuditLog({ searchParams }: AuditLogProps) {
             <ul className="mt-1 list-inside list-disc">
               {document.Recipient.map((recipient) => (
                 <li key={recipient.id}>
-                  <span className="text-muted">
+                  <span className="text-muted-foreground">
                     [{RECIPIENT_ROLES_DESCRIPTION[recipient.role].roleName}]
                   </span>{' '}
                   {recipient.name} ({recipient.email})

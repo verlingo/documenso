@@ -23,7 +23,7 @@ export const SettingsHeader = ({
         <div>
           <h3 className="text-lg font-medium">{title}</h3>
 
-          <p className="text-muted text-sm md:mt-2">{subtitle}</p>
+          <p className="text-muted-foreground text-sm md:mt-2">{subtitle}</p>
         </div>
 
         {children}

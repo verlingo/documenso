@@ -86,7 +86,7 @@ export const MobileNavigation = ({ isMenuOpen, onMenuOpenChange }: MobileNavigat
             <ThemeSwitcher />
           </div>
 
-          <p className="text-muted text-sm">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Documenso, Inc. <br /> All rights reserved.
           </p>
         </div>

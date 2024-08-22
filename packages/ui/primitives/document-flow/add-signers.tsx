@@ -364,7 +364,10 @@ export const AddSignersFormPartial = ({
                   onCheckedChange={(value) => setShowAdvancedSettings(Boolean(value))}
                 />
 
-                <label className="text-muted ml-2 text-sm" htmlFor="showAdvancedRecipientSettings">
+                <label
+                  className="text-muted-foreground ml-2 text-sm"
+                  htmlFor="showAdvancedRecipientSettings"
+                >
                   Show advanced settings
                 </label>
               </div>

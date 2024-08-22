@@ -91,7 +91,7 @@ export const PublicTemplatesDataTable = () => {
                     className="bg-background flex items-center justify-between gap-x-6 p-4"
                   >
                     <div className="flex gap-x-2">
-                      <FileIcon className="text-muted/40 h-8 w-8" strokeWidth={1.5} />
+                      <FileIcon className="text-muted-foreground/40 h-8 w-8" strokeWidth={1.5} />
 
                       <div className="space-y-2">
                         <Skeleton className="h-4 w-24" />
@@ -99,12 +99,12 @@ export const PublicTemplatesDataTable = () => {
                       </div>
                     </div>
 
-                    <MoreHorizontalIcon className="text-muted h-5 w-5" />
+                    <MoreHorizontalIcon className="text-muted-foreground h-5 w-5" />
                   </div>
                 ))}
 
             {isLoadingError && (
-              <div className="text-muted flex h-32 flex-col items-center justify-center text-sm">
+              <div className="text-muted-foreground flex h-32 flex-col items-center justify-center text-sm">
                 Unable to load your public profile templates at this time
                 <button
                   onClick={(e) => {
@@ -118,12 +118,12 @@ export const PublicTemplatesDataTable = () => {
             )}
 
             {!isInitialLoading && (
-              <div className="text-muted flex h-32 flex-col items-center justify-center text-sm">
+              <div className="text-muted-foreground flex h-32 flex-col items-center justify-center text-sm">
                 No public profile templates found
                 <ManagePublicTemplateDialog
                   directTemplates={privateDirectTemplates}
                   trigger={
-                    <button className="hover:text-muted/80 mt-1 text-xs">
+                    <button className="hover:text-muted-foreground/80 mt-1 text-xs">
                       Click here to get started
                     </button>
                   }
@@ -140,7 +140,10 @@ export const PublicTemplatesDataTable = () => {
             className="bg-background flex items-center justify-between gap-x-6 p-4"
           >
             <div className="flex gap-x-2">
-              <FileIcon className="text-muted/40 h-8 w-8 flex-shrink-0" strokeWidth={1.5} />
+              <FileIcon
+                className="text-muted-foreground/40 h-8 w-8 flex-shrink-0"
+                strokeWidth={1.5}
+              />
 
               <div>
                 <p className="text-sm">{template.publicTitle}</p>
@@ -150,7 +153,7 @@ export const PublicTemplatesDataTable = () => {
 
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <MoreHorizontalIcon className="text-muted h-5 w-5" />
+                <MoreHorizontalIcon className="text-muted-foreground h-5 w-5" />
               </DropdownMenuTrigger>
 
               <DropdownMenuContent className="w-52" align="center" side="left">

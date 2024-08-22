@@ -27,10 +27,13 @@ export const PricingTable = ({ className, ...props }: PricingTableProps) => {
         <AnimatePresence>
           <motion.button
             key="MONTHLY"
-            className={cn('text-muted relative flex items-center gap-x-2.5 px-1 py-2.5', {
-              'text-foreground': period === 'MONTHLY',
-              'hover:text-foreground/80': period !== 'MONTHLY',
-            })}
+            className={cn(
+              'text-muted-foreground relative flex items-center gap-x-2.5 px-1 py-2.5',
+              {
+                'text-foreground': period === 'MONTHLY',
+                'hover:text-foreground/80': period !== 'MONTHLY',
+              },
+            )}
             onClick={() => setPeriod('MONTHLY')}
           >
             Monthly
@@ -44,10 +47,13 @@ export const PricingTable = ({ className, ...props }: PricingTableProps) => {
 
           <motion.button
             key="YEARLY"
-            className={cn('text-muted relative flex items-center gap-x-2.5 px-1 py-2.5', {
-              'text-foreground': period === 'YEARLY',
-              'hover:text-foreground/80': period !== 'YEARLY',
-            })}
+            className={cn(
+              'text-muted-foreground relative flex items-center gap-x-2.5 px-1 py-2.5',
+              {
+                'text-foreground': period === 'YEARLY',
+                'hover:text-foreground/80': period !== 'YEARLY',
+              },
+            )}
             onClick={() => setPeriod('YEARLY')}
           >
             Yearly

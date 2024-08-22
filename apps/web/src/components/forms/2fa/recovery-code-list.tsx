@@ -38,7 +38,7 @@ export const RecoveryCodeList = ({ recoveryCodes }: RecoveryCodeListProps) => {
       {recoveryCodes.map((code) => (
         <div
           key={code}
-          className="bg-muted text-muted relative rounded-lg p-4 font-mono md:text-center"
+          className="bg-muted text-muted-foreground relative rounded-lg p-4 font-mono md:text-center"
         >
           <span>{code}</span>
 

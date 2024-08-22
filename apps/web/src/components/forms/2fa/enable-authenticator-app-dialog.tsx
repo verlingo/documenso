@@ -191,16 +191,16 @@ export const EnableAuthenticatorAppDialog = ({ onSuccess }: EnableAuthenticatorA
                       }}
                     />
 
-                    <p className="text-muted text-sm">
+                    <p className="text-muted-foreground text-sm">
                       If your authenticator app does not support QR codes, you can use the following
                       code instead:
                     </p>
 
-                    <p className="bg-muted/60 text-muted rounded-lg p-2 text-center font-mono tracking-widest">
+                    <p className="bg-muted/60 text-muted-foreground rounded-lg p-2 text-center font-mono tracking-widest">
                       {setup2FAData?.secret}
                     </p>
 
-                    <p className="text-muted text-sm">
+                    <p className="text-muted-foreground text-sm">
                       Once you have scanned the QR code or entered the code manually, enter the code
                       provided by your authenticator app below.
                     </p>
@@ -210,7 +210,7 @@ export const EnableAuthenticatorAppDialog = ({ onSuccess }: EnableAuthenticatorA
                       control={enable2FAForm.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-muted">Token</FormLabel>
+                          <FormLabel className="text-muted-foreground">Token</FormLabel>
                           <FormControl>
                             <PinInput {...field} value={field.value ?? ''} maxLength={6}>
                               {Array(6)

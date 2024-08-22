@@ -37,7 +37,7 @@ export default function WebhookPage() {
       {webhooks && webhooks.length === 0 && (
         // TODO: Perhaps add some illustrations here to make the page more engaging
         <div className="mb-4">
-          <p className="text-muted mt-2 text-sm italic">
+          <p className="text-muted-foreground mt-2 text-sm italic">
             You have no webhooks yet. Your webhooks will be shown here once you create them.
           </p>
         </div>
@@ -70,14 +70,14 @@ export default function WebhookPage() {
                     </Badge>
                   </div>
 
-                  <p className="text-muted mt-2 text-xs">
+                  <p className="text-muted-foreground mt-2 text-xs">
                     Listening to{' '}
                     {webhook.eventTriggers
                       .map((trigger) => toFriendlyWebhookEventName(trigger))
                       .join(', ')}
                   </p>
 
-                  <p className="text-muted mt-2 text-xs">
+                  <p className="text-muted-foreground mt-2 text-xs">
                     Created on{' '}
                     <LocaleDate date={webhook.createdAt} format={DateTime.DATETIME_FULL} />
                   </p>

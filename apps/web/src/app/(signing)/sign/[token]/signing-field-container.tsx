@@ -107,7 +107,7 @@ export const SigningFieldContainer = ({
       {!field.inserted && !loading && (
         <button
           type="submit"
-          className=" absolute inset-0 z-10 h-full w-full"
+          className="absolute inset-0 z-10 h-full w-full"
           onClick={async () => handleInsertField()}
         />
       )}

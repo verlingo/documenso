@@ -1,9 +1,16 @@
 'use server';
 
+import { createElement } from 'react';
+
+import { mailer } from '@documenso/email/mailer';
+import { render } from '@documenso/email/render';
+import DocumentCancelTemplate from '@documenso/email/templates/document-cancel';
 import { prisma } from '@documenso/prisma';
 import type { Document, DocumentMeta, Recipient, User } from '@documenso/prisma/client';
 import { DocumentStatus } from '@documenso/prisma/client';
 
+import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
+import { FROM_ADDRESS, FROM_NAME } from '../../constants/email';
 import { DOCUMENT_AUDIT_LOG_TYPE } from '../../types/document-audit-logs';
 import type { RequestMetadata } from '../../universal/extract-request-metadata';
 import { createDocumentAuditLogData } from '../../utils/document-audit-logs';
@@ -169,32 +176,32 @@ const handleDocumentOwnerDelete = async ({
   });
 
   // Send cancellation emails to recipients.
-  // await Promise.all(
-  //   document.Recipient.map(async (recipient) => {
-  //     const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
+  await Promise.all(
+    document.Recipient.map(async (recipient) => {
+      const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
 
-  //     const template = createElement(DocumentCancelTemplate, {
-  //       documentName: document.title,
-  //       inviterName: user.name || undefined,
-  //       inviterEmail: user.email,
-  //       assetBaseUrl,
-  //     });
+      const template = createElement(DocumentCancelTemplate, {
+        documentName: document.title,
+        inviterName: user.name || undefined,
+        inviterEmail: user.email,
+        assetBaseUrl,
+      });
 
-  //     await mailer.sendMail({
-  //       to: {
-  //         address: recipient.email,
-  //         name: recipient.name,
-  //       },
-  //       from: {
-  //         name: FROM_NAME,
-  //         address: FROM_ADDRESS,
-  //       },
-  //       subject: 'Document Cancelled',
-  //       html: render(template),
-  //       text: render(template, { plainText: true }),
-  //     });
-  //   }),
-  // );
+      await mailer.sendMail({
+        to: {
+          address: recipient.email,
+          name: recipient.name,
+        },
+        from: {
+          name: FROM_NAME,
+          address: FROM_ADDRESS,
+        },
+        subject: 'Document Cancelled',
+        html: render(template),
+        text: render(template, { plainText: true }),
+      });
+    }),
+  );
 
   return deletedDocument;
 };

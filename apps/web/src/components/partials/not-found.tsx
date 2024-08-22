@@ -36,11 +36,11 @@ export default function NotFoundPartial({ children }: NotFoundPartialProps) {
 
       <div className="container mx-auto flex h-full min-h-screen items-center px-6 py-32">
         <div>
-          <p className="text-muted font-semibold">404 Page not found</p>
+          <p className="text-muted-foreground font-semibold">404 Page not found</p>
 
           <h1 className="mt-3 text-2xl font-bold md:text-3xl">Oops! Something went wrong.</h1>
 
-          <p className="text-muted mt-4 text-sm">
+          <p className="text-muted-foreground mt-4 text-sm">
             The page you are looking for was moved, removed, renamed or might never have existed.
           </p>
 

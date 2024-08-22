@@ -25,7 +25,7 @@ export const UserProfileTimur = ({ className, rows = 2 }: UserProfileTimurProps)
         className,
       )}
     >
-      <div className="border-border bg-background text-muted inline-block max-w-full truncate rounded-md border px-2.5 py-1.5 text-sm">
+      <div className="border-border bg-background text-muted-foreground inline-block max-w-full truncate rounded-md border px-2.5 py-1.5 text-sm">
         {baseUrl.host}/u/timur
       </div>
 
@@ -44,16 +44,16 @@ export const UserProfileTimur = ({ className, rows = 2 }: UserProfileTimurProps)
           <VerifiedIcon className="text-primary h-8 w-8" />
         </div>
 
-        <p className="text-muted mt-4 max-w-[40ch] text-center text-sm">Hey I’m Timur</p>
+        <p className="text-muted-foreground mt-4 max-w-[40ch] text-center text-sm">Hey I’m Timur</p>
 
-        <p className="text-muted mt-1 max-w-[40ch] text-center text-sm">
+        <p className="text-muted-foreground mt-1 max-w-[40ch] text-center text-sm">
           Pick any of the following agreements below and start signing to get started
         </p>
       </div>
 
       <div className="mt-8 w-full">
         <div className="dark:divide-foreground/30 dark:border-foreground/30 divide-y-2 divide-neutral-200 overflow-hidden rounded-lg border-2 border-neutral-200">
-          <div className="text-muted dark:bg-foreground/20 bg-neutral-50 p-4 font-medium">
+          <div className="text-muted-foreground dark:bg-foreground/20 bg-neutral-50 p-4 font-medium">
             Documents
           </div>
 
@@ -65,7 +65,7 @@ export const UserProfileTimur = ({ className, rows = 2 }: UserProfileTimurProps)
                 className="bg-background flex items-center justify-between gap-x-6 p-4"
               >
                 <div className="flex items-center gap-x-2">
-                  <File className="text-muted/80 h-8 w-8" strokeWidth={1.5} />
+                  <File className="text-muted-foreground/80 h-8 w-8" strokeWidth={1.5} />
 
                   <div className="space-y-2">
                     <div className="dark:bg-foreground/30 h-1.5 w-24 rounded-full bg-neutral-300 md:w-36" />

@@ -10,11 +10,11 @@ export default function NotFound() {
   return (
     <div className="mx-auto flex min-h-[80vh] w-full items-center justify-center py-32">
       <div>
-        <p className="text-muted font-semibold">404 Profile not found</p>
+        <p className="text-muted-foreground font-semibold">404 Profile not found</p>
 
         <h1 className="mt-3 text-2xl font-bold md:text-3xl">Oops! Something went wrong.</h1>
 
-        <p className="text-muted mt-4 text-sm">
+        <p className="text-muted-foreground mt-4 text-sm">
           The profile you are looking for could not be found.
         </p>
 

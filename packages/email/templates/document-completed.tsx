@@ -34,9 +34,9 @@ export const DocumentCompletedEmailTemplate = ({
           },
         }}
       >
-        <Body style={body} className="mx-auto my-auto font-sans">
-          <Section className="">
-            {/* <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-2 backdrop-blur-sm">
+        <Body className="mx-auto my-auto font-sans">
+          <Section className="bg-white">
+            <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-2 backdrop-blur-sm">
               <Section className="p-2">
                 <Img
                   src={getAssetUrl('/static/logo.png')}
@@ -49,25 +49,6 @@ export const DocumentCompletedEmailTemplate = ({
                   documentName={documentName}
                   assetBaseUrl={assetBaseUrl}
                   customBody={customBody}
-                />
-              </Section>
-            </Container> */}
-            <Container
-              style={emailWrapper}
-              className="mx-auto rounded-lg border border-solid border-slate-200 bg-white shadow-lg"
-            >
-              <Section style={{ padding: 30 }}>
-                <Img
-                  src={getAssetUrl('/static/logo.png')}
-                  alt="verlingo Logo"
-                  className="m-6 mb-4 h-6"
-                  style={{ marginBottom: 150 }}
-                />
-
-                <TemplateDocumentCompleted
-                  downloadLink={downloadLink}
-                  documentName={documentName}
-                  assetBaseUrl={assetBaseUrl}
                 />
               </Section>
             </Container>
@@ -83,11 +64,3 @@ export const DocumentCompletedEmailTemplate = ({
 };
 
 export default DocumentCompletedEmailTemplate;
-const emailWrapper = {
-  maxWidth: '600px',
-  // padding: '1.0rem',
-  borderRadius: '0.5rem',
-};
-const body = {
-  backgroundColor: '#f5f7fb',
-};

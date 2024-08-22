@@ -74,7 +74,7 @@ export const AddSubjectFormPartial = ({
           <div className="flex flex-col gap-y-4">
             <div>
               <Label htmlFor="subject">
-                Subject <span className="text-muted">(Optional)</span>
+                Subject <span className="text-muted-foreground">(Optional)</span>
               </Label>
 
               <Input
@@ -89,7 +89,7 @@ export const AddSubjectFormPartial = ({
 
             <div>
               <Label htmlFor="message">
-                Message <span className="text-muted">(Optional)</span>
+                Message <span className="text-muted-foreground">(Optional)</span>
               </Label>
 
               <Textarea

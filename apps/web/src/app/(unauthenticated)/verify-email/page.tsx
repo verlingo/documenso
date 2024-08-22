@@ -22,7 +22,7 @@ export default function EmailVerificationWithoutTokenPage() {
             Uh oh! Looks like you're missing a token
           </h2>
 
-          <p className="text-muted mt-4">
+          <p className="text-muted-foreground mt-4">
             It seems that there is no token provided, if you are trying to verify your email please
             follow the link in your email.
           </p>

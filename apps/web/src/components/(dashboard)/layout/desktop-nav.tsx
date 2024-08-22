@@ -54,9 +54,11 @@ export const DesktopNav = ({ className, setIsCommandMenuOpen, ...props }: Deskto
             key={href}
             href={`${rootHref}${href}`}
             className={cn(
-              'text-muted dark:text-muted/60 focus-visible:ring-ring ring-offset-background rounded-md font-medium leading-5 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2',
+              'text-muted-foreground dark:text-muted-foreground/60 focus-visible:ring-ring ring-offset-background rounded-md font-medium leading-5 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2',
               {
-                'text-foreground dark:text-muted': pathname?.startsWith(`${rootHref}${href}`),
+                'text-foreground dark:text-muted-foreground': pathname?.startsWith(
+                  `${rootHref}${href}`,
+                ),
               },
             )}
           >
@@ -67,7 +69,7 @@ export const DesktopNav = ({ className, setIsCommandMenuOpen, ...props }: Deskto
 
       <Button
         variant="outline"
-        className="text-muted flex w-96 items-center justify-between rounded-lg"
+        className="text-muted-foreground flex w-96 items-center justify-between rounded-lg"
         onClick={() => setIsCommandMenuOpen(true)}
       >
         <div className="flex items-center">
@@ -76,7 +78,7 @@ export const DesktopNav = ({ className, setIsCommandMenuOpen, ...props }: Deskto
         </div>
 
         <div>
-          <div className="text-muted bg-muted flex items-center rounded-md px-1.5 py-0.5  text-xs tracking-wider">
+          <div className="text-muted-foreground bg-muted flex items-center rounded-md px-1.5 py-0.5  text-xs tracking-wider">
             {modifierKey}+K
           </div>
         </div>

@@ -30,7 +30,7 @@ export const SigningCard = ({
   signingCelebrationImage,
 }: SigningCardProps) => {
   return (
-    <div className={cn('relative w-full max-w-xs  md:max-w-sm', className)}>
+    <div className={cn('relative w-full max-w-xs md:max-w-sm', className)}>
       <SigningCardContent name={name} signature={signature} />
 
       {signingCelebrationImage && (
@@ -182,12 +182,12 @@ const SigningCardContent = ({ className, name, signature }: SigningCardContentPr
             <img
               src={signature.signatureImageAsBase64}
               alt="signature"
-              className="h-full max-w-[100%] "
+              className="h-full max-w-[100%] dark:invert"
             />
           ))
           .with({ typedSignature: P.string }, (signature) => (
             <span
-              className="text-muted/60 group-hover:text-primary/80 break-all font-semibold duration-300"
+              className="text-muted-foreground/60 group-hover:text-primary/80 break-all font-semibold duration-300"
               style={{
                 fontSize: `max(min(4rem, ${(100 / signature.typedSignature.length / 2).toFixed(
                   4,
@@ -199,7 +199,7 @@ const SigningCardContent = ({ className, name, signature }: SigningCardContentPr
           ))
           .otherwise(() => (
             <span
-              className="text-muted/60 group-hover:text-primary/80 break-all font-semibold duration-300"
+              className="text-muted-foreground/60 group-hover:text-primary/80 break-all font-semibold duration-300"
               style={{
                 fontSize: `max(min(4rem, ${(100 / name.length / 2).toFixed(4)}cqw), 1.875rem)`,
               }}
@@ -236,7 +236,7 @@ const SigningCardImage = ({ signingCelebrationImage }: SigningCardImageProps) =>
       <Image
         src={signingCelebrationImage}
         alt="background pattern"
-        className="w-full dark:brightness-150 dark:contrast-[70%]  dark:sepia"
+        className="w-full dark:brightness-150 dark:contrast-[70%] dark:invert dark:sepia"
         style={{
           mask: 'radial-gradient(rgba(255, 255, 255, 1) 0%, transparent 67%)',
           WebkitMask: 'radial-gradient(rgba(255, 255, 255, 1) 0%, transparent 67%)',

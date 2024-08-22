@@ -47,7 +47,7 @@ export const DocumentPageViewRecentActivity = ({
   const documentAuditLogs = useMemo(() => (data?.pages ?? []).flatMap((page) => page.data), [data]);
 
   return (
-    <section className=" border-border bg-widget flex flex-col rounded-xl border">
+    <section className="dark:bg-background border-border bg-widget flex flex-col rounded-xl border">
       <div className="flex flex-row items-center justify-between border-b px-4 py-3">
         <h1 className="text-foreground font-medium">Recent activity</h1>
 
@@ -56,7 +56,7 @@ export const DocumentPageViewRecentActivity = ({
 
       {isLoading && (
         <div className="flex h-full items-center justify-center py-16">
-          <Loader className="text-muted h-6 w-6 animate-spin" />
+          <Loader className="text-muted-foreground h-6 w-6 animate-spin" />
         </div>
       )}
 
@@ -65,7 +65,7 @@ export const DocumentPageViewRecentActivity = ({
           <p className="text-foreground/80 text-sm">Unable to load document history</p>
           <button
             onClick={async () => refetch()}
-            className="text-foreground/70 hover:text-muted mt-2 text-sm"
+            className="text-foreground/70 hover:text-muted-foreground mt-2 text-sm"
           >
             Click here to retry
           </button>
@@ -87,7 +87,7 @@ export const DocumentPageViewRecentActivity = ({
 
                 <button
                   onClick={async () => fetchNextPage()}
-                  className="text-foreground/70 hover:text-muted text-xs"
+                  className="text-foreground/70 hover:text-muted-foreground text-xs"
                 >
                   {isFetchingNextPage ? 'Loading...' : 'Load older activity'}
                 </button>
@@ -96,7 +96,7 @@ export const DocumentPageViewRecentActivity = ({
 
             {documentAuditLogs.length === 0 && (
               <div className="flex items-center justify-center py-4">
-                <p className="text-muted/70 text-sm">No recent activity</p>
+                <p className="text-muted-foreground/70 text-sm">No recent activity</p>
               </div>
             )}
 
@@ -133,14 +133,14 @@ export const DocumentPageViewRecentActivity = ({
                     ))}
                 </div>
 
-                <p className="text-muted dark:text-muted/70 flex-auto py-0.5 text-xs leading-5">
+                <p className="text-muted-foreground dark:text-muted-foreground/70 flex-auto py-0.5 text-xs leading-5">
                   <span className="text-foreground font-medium">
                     {formatDocumentAuditLogAction(auditLog, userId).prefix}
                   </span>{' '}
                   {formatDocumentAuditLogAction(auditLog, userId).description}
                 </p>
 
-                <time className="text-muted dark:text-muted/70 flex-none py-0.5 text-xs leading-5">
+                <time className="text-muted-foreground dark:text-muted-foreground/70 flex-none py-0.5 text-xs leading-5">
                   {DateTime.fromJSDate(auditLog.createdAt).toRelative({ style: 'short' })}
                 </time>
               </li>

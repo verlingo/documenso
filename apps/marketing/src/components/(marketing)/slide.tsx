@@ -17,9 +17,9 @@ export const Slide: React.FC<SlideProps> = (props) => {
       onClick={onClick}
       type="button"
       className={cn(
-        'text-muted dark:text-muted/60 border-b-2 border-transparent py-1 text-xs sm:py-4 sm:text-base',
+        'text-muted-foreground dark:text-muted-foreground/60 border-b-2 border-transparent py-1 text-xs sm:py-4 sm:text-base',
         {
-          'border-primary text-foreground dark:text-muted border-b-2': selected,
+          'border-primary text-foreground dark:text-muted-foreground border-b-2': selected,
         },
       )}
     >

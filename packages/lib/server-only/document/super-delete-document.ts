@@ -2,11 +2,14 @@
 
 import { createElement } from 'react';
 
+import { mailer } from '@documenso/email/mailer';
+import { render } from '@documenso/email/render';
 import DocumentCancelTemplate from '@documenso/email/templates/document-cancel';
 import { prisma } from '@documenso/prisma';
 import { DocumentStatus } from '@documenso/prisma/client';
 
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
+import { FROM_ADDRESS, FROM_NAME } from '../../constants/email';
 import { DOCUMENT_AUDIT_LOG_TYPE } from '../../types/document-audit-logs';
 import type { RequestMetadata } from '../../universal/extract-request-metadata';
 import { createDocumentAuditLogData } from '../../utils/document-audit-logs';
@@ -46,19 +49,19 @@ export const superDeleteDocument = async ({ id, requestMetadata }: SuperDeleteDo
           assetBaseUrl,
         });
 
-        // await mailer.sendMail({
-        //   to: {
-        //     address: recipient.email,
-        //     name: recipient.name,
-        //   },
-        //   from: {
-        //     name: FROM_NAME,
-        //     address: FROM_ADDRESS,
-        //   },
-        //   subject: 'Document Cancelled',
-        //   html: render(template),
-        //   text: render(template, { plainText: true }),
-        // });
+        await mailer.sendMail({
+          to: {
+            address: recipient.email,
+            name: recipient.name,
+          },
+          from: {
+            name: FROM_NAME,
+            address: FROM_ADDRESS,
+          },
+          subject: 'Document Cancelled',
+          html: render(template),
+          text: render(template, { plainText: true }),
+        });
       }),
     );
   }

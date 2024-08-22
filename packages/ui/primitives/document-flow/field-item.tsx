@@ -119,7 +119,7 @@ export const FieldItem = ({
     >
       {!disabled && (
         <button
-          className="text-muted/50 hover:text-muted/80 bg-background absolute -right-2 -top-2 z-20 flex h-8 w-8 items-center justify-center rounded-full border"
+          className="text-muted-foreground/50 hover:text-muted-foreground/80 bg-background absolute -right-2 -top-2 z-20 flex h-8 w-8 items-center justify-center rounded-full border"
           onClick={() => onRemove?.()}
           onTouchEnd={() => onRemove?.()}
         >

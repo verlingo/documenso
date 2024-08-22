@@ -135,7 +135,9 @@ export const Hero = ({ className, ...props }: HeroProps) => {
               className="border-primary bg-background hover:bg-muted mx-auto mt-8 w-60 rounded-xl border transition-colors duration-300"
             >
               <Link href="/singleplayer" className="block px-4 py-2 text-center">
-                <h2 className="text-muted text-xs font-semibold">Introducing Single Player Mode</h2>
+                <h2 className="text-muted-foreground text-xs font-semibold">
+                  Introducing Single Player Mode
+                </h2>
 
                 <h1 className="text-foreground mt-1.5 font-medium leading-5">
                   Self sign for free!

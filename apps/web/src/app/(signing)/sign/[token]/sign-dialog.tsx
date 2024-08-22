@@ -47,7 +47,7 @@ export const SignDialog = ({
     <Dialog open={showDialog} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button
-          className="w-full text-white"
+          className="w-full"
           type="button"
           size="lg"
           onClick={fieldsValidated}
@@ -66,7 +66,7 @@ export const SignDialog = ({
           </div>
         </DialogTitle>
 
-        <div className="text-muted max-w-[50ch]">
+        <div className="text-muted-foreground max-w-[50ch]">
           {role === RecipientRole.VIEWER && (
             <span>
               You are about to complete viewing "{truncatedTitle}".
@@ -93,7 +93,7 @@ export const SignDialog = ({
           <div className="flex w-full flex-1 flex-nowrap gap-4">
             <Button
               type="button"
-              className="dark:bg-muted dark:hover:bg-muted/80 flex-1  bg-black/5 text-white hover:bg-black/10"
+              className="dark:bg-muted dark:hover:bg-muted/80 flex-1  bg-black/5 hover:bg-black/10"
               variant="secondary"
               onClick={() => {
                 setShowDialog(false);
@@ -104,7 +104,7 @@ export const SignDialog = ({
 
             <Button
               type="button"
-              className="flex-1 text-white"
+              className="flex-1"
               disabled={!isComplete}
               loading={isSubmitting}
               onClick={onSignatureComplete}

@@ -19,7 +19,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitive
 export const DocumentGlobalAuthActionSelect = forwardRef<HTMLButtonElement, SelectProps>(
   (props, ref) => (
     <Select {...props}>
-      <SelectTrigger className="bg-background text-muted">
+      <SelectTrigger className="bg-background text-muted-foreground">
         <SelectValue ref={ref} data-testid="documentActionSelectValue" placeholder="None" />
       </SelectTrigger>
 

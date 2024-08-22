@@ -33,7 +33,7 @@ export default async function AcceptInvitationPage({
         <div className="w-full">
           <h1 className="text-4xl font-semibold">Invalid token</h1>
 
-          <p className="text-muted mb-4 mt-2 text-sm">
+          <p className="text-muted-foreground mb-4 mt-2 text-sm">
             This token is invalid or has expired. Please contact your team for a new invitation.
           </p>
 
@@ -84,11 +84,11 @@ export default async function AcceptInvitationPage({
       <div>
         <h1 className="text-4xl font-semibold">Team invitation</h1>
 
-        <p className="text-muted mt-2 text-sm">
+        <p className="text-muted-foreground mt-2 text-sm">
           You have been invited by <strong>{team.name}</strong> to join their team.
         </p>
 
-        <p className="text-muted mb-4 mt-1 text-sm">
+        <p className="text-muted-foreground mb-4 mt-1 text-sm">
           To accept this invitation you must create an account.
         </p>
 
@@ -105,7 +105,7 @@ export default async function AcceptInvitationPage({
     <div>
       <h1 className="text-4xl font-semibold">Invitation accepted!</h1>
 
-      <p className="text-muted mb-4 mt-2 text-sm">
+      <p className="text-muted-foreground mb-4 mt-2 text-sm">
         You have accepted an invitation from <strong>{team.name}</strong> to join their team.
       </p>
 

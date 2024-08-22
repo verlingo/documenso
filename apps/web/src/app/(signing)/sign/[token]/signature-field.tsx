@@ -190,7 +190,7 @@ export const SignatureField = ({
       )}
 
       {state === 'empty' && (
-        <p className="group-hover:text-primary font-signature text-muted text-lg duration-200 sm:text-xl md:text-2xl lg:text-3xl">
+        <p className="group-hover:text-primary font-signature text-muted-foreground text-lg duration-200 sm:text-xl md:text-2xl lg:text-3xl">
           Signature
         </p>
       )}
@@ -199,12 +199,12 @@ export const SignatureField = ({
         <img
           src={signature.signatureImageAsBase64}
           alt={`Signature for ${recipient.name}`}
-          className="h-full w-full object-contain "
+          className="h-full w-full object-contain dark:invert"
         />
       )}
 
       {state === 'signed-text' && (
-        <p className="font-signature text-muted text-lg duration-200 sm:text-xl md:text-2xl lg:text-3xl">
+        <p className="font-signature text-muted-foreground text-lg duration-200 sm:text-xl md:text-2xl lg:text-3xl">
           {/* This optional chaining is intentional, we don't want to move the check into the condition above */}
           {signature?.typedSignature}
         </p>
@@ -213,7 +213,8 @@ export const SignatureField = ({
       <Dialog open={showSignatureModal} onOpenChange={setShowSignatureModal}>
         <DialogContent>
           <DialogTitle>
-            Sign as {recipient.name} <span className="text-muted">({recipient.email})</span>
+            Sign as {recipient.name}{' '}
+            <span className="text-muted-foreground">({recipient.email})</span>
           </DialogTitle>
 
           <div className="">

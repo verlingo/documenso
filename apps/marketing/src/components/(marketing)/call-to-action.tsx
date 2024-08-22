@@ -15,7 +15,7 @@ export const CallToAction = ({ className, utmSource = 'generic-cta' }: CallToAct
       <CardContent className="flex flex-col items-center justify-center p-12">
         <h2 className="text-center text-2xl font-bold">Join the Open Signing Movement</h2>
 
-        <p className="text-muted mt-4 max-w-[55ch] text-center leading-normal">
+        <p className="text-muted-foreground mt-4 max-w-[55ch] text-center leading-normal">
           Create your account and start using state-of-the-art document signing. Open and beautiful
           signing is within your grasp.
         </p>

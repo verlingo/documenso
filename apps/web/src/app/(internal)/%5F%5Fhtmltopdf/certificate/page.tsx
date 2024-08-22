@@ -171,11 +171,11 @@ export default async function SigningCertificate({ searchParams }: SigningCertif
                     <TableCell truncate={false} className="w-[min-content] max-w-[220px] align-top">
                       <div className="hyphens-auto break-words font-medium">{recipient.name}</div>
                       <div className="break-all">{recipient.email}</div>
-                      <p className="text-muted mt-2 text-sm print:text-xs">
+                      <p className="text-muted-foreground mt-2 text-sm print:text-xs">
                         {RECIPIENT_ROLES_DESCRIPTION[recipient.role].roleName}
                       </p>
 
-                      <p className="text-muted mt-2 text-sm print:text-xs">
+                      <p className="text-muted-foreground mt-2 text-sm print:text-xs">
                         <span className="font-medium">Authentication Level:</span>{' '}
                         <span className="block">{getAuthenticationLevel(recipient.id)}</span>
                       </p>
@@ -197,21 +197,21 @@ export default async function SigningCertificate({ searchParams }: SigningCertif
                             />
                           </div>
 
-                          <p className="text-muted mt-2 text-sm print:text-xs">
+                          <p className="text-muted-foreground mt-2 text-sm print:text-xs">
                             <span className="font-medium">Signature ID:</span>{' '}
                             <span className="block font-mono uppercase">
                               {signature.secondaryId}
                             </span>
                           </p>
 
-                          <p className="text-muted mt-2 text-sm print:text-xs">
+                          <p className="text-muted-foreground mt-2 text-sm print:text-xs">
                             <span className="font-medium">IP Address:</span>{' '}
                             <span className="inline-block">
                               {logs.DOCUMENT_RECIPIENT_COMPLETED[0]?.ipAddress ?? 'Unknown'}
                             </span>
                           </p>
 
-                          <p className="text-muted mt-1 text-sm print:text-xs">
+                          <p className="text-muted-foreground mt-1 text-sm print:text-xs">
                             <span className="font-medium">Device:</span>{' '}
                             <span className="inline-block">
                               {getDevice(logs.DOCUMENT_RECIPIENT_COMPLETED[0]?.userAgent)}
@@ -219,13 +219,13 @@ export default async function SigningCertificate({ searchParams }: SigningCertif
                           </p>
                         </>
                       ) : (
-                        <p className="text-muted">N/A</p>
+                        <p className="text-muted-foreground">N/A</p>
                       )}
                     </TableCell>
 
                     <TableCell truncate={false} className="w-[min-content] align-top">
                       <div className="space-y-1">
-                        <p className="text-muted text-sm print:text-xs">
+                        <p className="text-muted-foreground text-sm print:text-xs">
                           <span className="font-medium">Sent:</span>{' '}
                           <span className="inline-block">
                             {logs.EMAIL_SENT[0] ? (
@@ -239,7 +239,7 @@ export default async function SigningCertificate({ searchParams }: SigningCertif
                           </span>
                         </p>
 
-                        <p className="text-muted text-sm print:text-xs">
+                        <p className="text-muted-foreground text-sm print:text-xs">
                           <span className="font-medium">Viewed:</span>{' '}
                           <span className="inline-block">
                             {logs.DOCUMENT_OPENED[0] ? (
@@ -253,7 +253,7 @@ export default async function SigningCertificate({ searchParams }: SigningCertif
                           </span>
                         </p>
 
-                        <p className="text-muted text-sm print:text-xs">
+                        <p className="text-muted-foreground text-sm print:text-xs">
                           <span className="font-medium">Signed:</span>{' '}
                           <span className="inline-block">
                             {logs.DOCUMENT_RECIPIENT_COMPLETED[0] ? (
@@ -267,7 +267,7 @@ export default async function SigningCertificate({ searchParams }: SigningCertif
                           </span>
                         </p>
 
-                        <p className="text-muted text-sm print:text-xs">
+                        <p className="text-muted-foreground text-sm print:text-xs">
                           <span className="font-medium">Reason:</span>{' '}
                           <span className="inline-block">
                             {isOwner(recipient.email)

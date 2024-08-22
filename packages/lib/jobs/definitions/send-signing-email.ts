@@ -2,6 +2,8 @@ import { createElement } from 'react';
 
 import { z } from 'zod';
 
+import { mailer } from '@documenso/email/mailer';
+import { render } from '@documenso/email/render';
 import DocumentInviteEmailTemplate from '@documenso/email/templates/document-invite';
 import { prisma } from '@documenso/prisma';
 import {
@@ -12,6 +14,7 @@ import {
 } from '@documenso/prisma/client';
 
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
+import { FROM_ADDRESS, FROM_NAME } from '../../constants/email';
 import {
   RECIPIENT_ROLES_DESCRIPTION,
   RECIPIENT_ROLE_TO_EMAIL_TYPE,
@@ -113,24 +116,24 @@ export const SEND_SIGNING_EMAIL_JOB_DEFINITION = {
       selfSigner,
     });
 
-    // await io.runTask('send-signing-email', async () => {
-    //   await mailer.sendMail({
-    //     to: {
-    //       name: recipient.name,
-    //       address: recipient.email,
-    //     },
-    //     from: {
-    //       name: FROM_NAME,
-    //       address: FROM_ADDRESS,
-    //     },
-    //     subject: renderCustomEmailTemplate(
-    //       documentMeta?.subject || emailSubject,
-    //       customEmailTemplate,
-    //     ),
-    //     html: render(template),
-    //     text: render(template, { plainText: true }),
-    //   });
-    // });
+    await io.runTask('send-signing-email', async () => {
+      await mailer.sendMail({
+        to: {
+          name: recipient.name,
+          address: recipient.email,
+        },
+        from: {
+          name: FROM_NAME,
+          address: FROM_ADDRESS,
+        },
+        subject: renderCustomEmailTemplate(
+          documentMeta?.subject || emailSubject,
+          customEmailTemplate,
+        ),
+        html: render(template),
+        text: render(template, { plainText: true }),
+      });
+    });
 
     await io.runTask('update-recipient', async () => {
       await prisma.recipient.update({

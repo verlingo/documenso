@@ -49,7 +49,7 @@ export const DataTableActionDropdown = ({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <MoreHorizontal className="text-muted h-5 w-5" />
+        <MoreHorizontal className="text-muted-foreground h-5 w-5" />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-52" align="start" forceMount>

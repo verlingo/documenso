@@ -66,11 +66,11 @@ export const Header = ({ className, user, teams, ...props }: HeaderProps) => {
 
         <div className="flex flex-row items-center space-x-4 md:hidden">
           <button onClick={() => setIsCommandMenuOpen(true)}>
-            <SearchIcon className="text-muted h-6 w-6" />
+            <SearchIcon className="text-muted-foreground h-6 w-6" />
           </button>
 
           <button onClick={() => setIsHamburgerMenuOpen(true)}>
-            <MenuIcon className="text-muted h-6 w-6" />
+            <MenuIcon className="text-muted-foreground h-6 w-6" />
           </button>
 
           <CommandMenu open={isCommandMenuOpen} onOpenChange={setIsCommandMenuOpen} />

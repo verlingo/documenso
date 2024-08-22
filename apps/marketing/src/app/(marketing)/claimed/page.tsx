@@ -77,16 +77,16 @@ export default async function ClaimedPlanPage({ searchParams = {} }: ClaimedPlan
         <u>{user.name}</u>
       </h1>
 
-      <p className="text-muted mt-4 max-w-prose text-base md:text-lg">
+      <p className="text-muted-foreground mt-4 max-w-prose text-base md:text-lg">
         It's not every day you get to be part of a revolution.
       </p>
 
-      <p className="text-muted mt-4 max-w-prose text-base md:text-lg">
+      <p className="text-muted-foreground mt-4 max-w-prose text-base md:text-lg">
         But today is that day, by signing up to Documenso, you're joining a movement of people who
         want to make the world a better place.
       </p>
 
-      <p className="text-muted mt-4 max-w-prose text-base md:text-lg">
+      <p className="text-muted-foreground mt-4 max-w-prose text-base md:text-lg">
         We're going to change the way people sign documents. We're going to make it easier, faster,
         and more secure. And we're going to do it together.
       </p>
@@ -105,7 +105,7 @@ export default async function ClaimedPlanPage({ searchParams = {} }: ClaimedPlan
               Timur
             </p>
 
-            <p className="text-muted text-sm md:text-lg">
+            <p className="text-muted-foreground text-sm md:text-lg">
               Timur Ercan
               <span className="block lg:hidden" />
               <span className="hidden lg:inline"> - </span>
@@ -123,7 +123,7 @@ export default async function ClaimedPlanPage({ searchParams = {} }: ClaimedPlan
               Lucas
             </p>
 
-            <p className="text-muted text-sm md:text-lg">
+            <p className="text-muted-foreground text-sm md:text-lg">
               Lucas Smith
               <span className="block lg:hidden" />
               <span className="hidden lg:inline"> - </span>
@@ -150,7 +150,7 @@ export default async function ClaimedPlanPage({ searchParams = {} }: ClaimedPlan
               </p>
             )}
 
-            <p className="text-muted text-sm md:text-lg">
+            <p className="text-muted-foreground text-sm md:text-lg">
               {user.name}
               <span className="block lg:hidden" />
               <span className="hidden lg:inline"> - </span>
@@ -164,17 +164,17 @@ export default async function ClaimedPlanPage({ searchParams = {} }: ClaimedPlan
         <h2 className="text-foreground text-2xl font-bold">Your sign in details</h2>
 
         <div className="mt-4">
-          <p className="text-muted text-lg">
+          <p className="text-muted-foreground text-lg">
             <span className="font-bold">Email:</span> {user.email}
           </p>
 
-          <p className="text-muted mt-2 text-lg">
+          <p className="text-muted-foreground mt-2 text-lg">
             <span className="font-bold">Password:</span>{' '}
             <PasswordReveal password={password ?? 'password'} />
           </p>
         </div>
 
-        <p className="text-muted mt-4 text-sm italic">
+        <p className="text-muted-foreground mt-4 text-sm italic">
           This is a temporary password. Please change it as soon as possible.
         </p>
 

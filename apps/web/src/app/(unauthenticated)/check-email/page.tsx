@@ -13,7 +13,7 @@ export default function ForgotPasswordPage() {
       <div className="w-full">
         <h1 className="text-4xl font-semibold">Email sent!</h1>
 
-        <p className="text-muted mb-4 mt-2 text-sm">
+        <p className="text-muted-foreground mb-4 mt-2 text-sm">
           A password reset email has been sent, if you have an account you should see it in your
           inbox shortly.
         </p>

@@ -91,15 +91,17 @@ export const BillingPlans = ({ prices }: BillingPlansProps) => {
               <CardContent className="flex h-full flex-col p-6">
                 <CardTitle>{price.product.name}</CardTitle>
 
-                <div className="text-muted mt-2 text-lg font-medium">
+                <div className="text-muted-foreground mt-2 text-lg font-medium">
                   ${toHumanPrice(price.unit_amount ?? 0)} {price.currency.toUpperCase()}{' '}
                   <span className="text-xs">per {interval}</span>
                 </div>
 
-                <div className="text-muted mt-1.5 text-sm">{price.product.description}</div>
+                <div className="text-muted-foreground mt-1.5 text-sm">
+                  {price.product.description}
+                </div>
 
                 {price.product.features && price.product.features.length > 0 && (
-                  <div className="text-muted mt-4">
+                  <div className="text-muted-foreground mt-4">
                     <div className="text-sm font-medium">Includes:</div>
 
                     <ul className="mt-1 divide-y text-sm">

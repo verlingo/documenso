@@ -36,7 +36,9 @@ export const DirectTemplateAuthPageView = () => {
       <div>
         <h1 className="text-3xl font-semibold">Authentication required</h1>
 
-        <p className="text-muted mt-2 text-sm">You need to be logged in to view this page.</p>
+        <p className="text-muted-foreground mt-2 text-sm">
+          You need to be logged in to view this page.
+        </p>
 
         <Button
           className="mt-4 w-full"

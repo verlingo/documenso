@@ -64,7 +64,7 @@ export const TemplatePageView = async ({ params, team }: TemplatePageViewProps) 
           </h1>
 
           <div className="mt-2.5 flex items-center">
-            <TemplateType inheritColor className="text-muted" type={template.type} />
+            <TemplateType inheritColor className="text-muted-foreground" type={template.type} />
 
             {template.directLink?.token && (
               <TemplateDirectLinkBadge

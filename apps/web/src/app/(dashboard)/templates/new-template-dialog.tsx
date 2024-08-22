@@ -106,7 +106,7 @@ export const NewTemplateDialog = ({ teamId, templateRootPath }: NewTemplateDialo
 
           {isUploadingFile && (
             <div className="bg-background/50 absolute inset-0 flex items-center justify-center rounded-lg">
-              <Loader className="text-muted h-12 w-12 animate-spin" />
+              <Loader className="text-muted-foreground h-12 w-12 animate-spin" />
             </div>
           )}
         </div>

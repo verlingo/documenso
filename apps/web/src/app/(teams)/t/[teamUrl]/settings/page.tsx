@@ -82,7 +82,7 @@ export default async function TeamsSettingsPage({ params }: TeamsSettingsPagePro
               />
 
               <div className="flex flex-row items-center pr-2">
-                <div className="text-muted mr-4 flex flex-row items-center text-sm xl:mr-8">
+                <div className="text-muted-foreground mr-4 flex flex-row items-center text-sm xl:mr-8">
                   {match({
                     teamEmail: team.teamEmail,
                     emailVerification: team.emailVerification,
@@ -131,7 +131,7 @@ export default async function TeamsSettingsPage({ params }: TeamsSettingsPagePro
               <AlertTitle>Team email</AlertTitle>
 
               <AlertDescription className="mr-2">
-                <ul className="text-muted mt-0.5 list-inside list-disc text-sm">
+                <ul className="text-muted-foreground mt-0.5 list-inside list-disc text-sm">
                   {/* Feature not available yet. */}
                   {/* <li>Display this name and email when sending documents</li> */}
                   {/* <li>View documents associated with this email</li> */}

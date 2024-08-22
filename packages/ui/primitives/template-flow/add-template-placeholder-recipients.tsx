@@ -296,7 +296,7 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
                         <h3 className="text-foreground text-lg font-semibold">
                           Direct link receiver
                         </h3>
-                        <p className="text-muted mt-1">
+                        <p className="text-muted-foreground mt-1">
                           This field cannot be modified or deleted. When you share this template's
                           direct link or add it to your public profile, anyone who accesses it can
                           input their name and email, and fill in the fields assigned to them.
@@ -363,7 +363,10 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
                   onCheckedChange={(value) => setShowAdvancedSettings(Boolean(value))}
                 />
 
-                <label className="text-muted ml-2 text-sm" htmlFor="showAdvancedRecipientSettings">
+                <label
+                  className="text-muted-foreground ml-2 text-sm"
+                  htmlFor="showAdvancedRecipientSettings"
+                >
                   Show advanced settings
                 </label>
               </div>

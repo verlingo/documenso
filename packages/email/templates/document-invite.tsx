@@ -2,7 +2,19 @@ import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-
 import type { RecipientRole } from '@documenso/prisma/client';
 import config from '@documenso/tailwind-config';
 
-import { Body, Container, Head, Html, Img, Preview, Section, Tailwind } from '../components';
+import {
+  Body,
+  Container,
+  Head,
+  Hr,
+  Html,
+  Img,
+  Link,
+  Preview,
+  Section,
+  Tailwind,
+  Text,
+} from '../components';
 import type { TemplateDocumentInviteProps } from '../template-components/template-document-invite';
 import { TemplateDocumentInvite } from '../template-components/template-document-invite';
 import { TemplateFooter } from '../template-components/template-footer';
@@ -46,18 +58,14 @@ export const DocumentInviteEmailTemplate = ({
           },
         }}
       >
-        <Body style={body} className="mx-auto my-auto font-sans">
+        <Body className="mx-auto my-auto bg-white font-sans">
           <Section>
-            <Container
-              style={emailWrapper}
-              className="mx-auto rounded-lg border border-solid border-slate-200 bg-white shadow-lg"
-            >
-              <Section style={{ padding: 30 }}>
+            <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-4 backdrop-blur-sm">
+              <Section>
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="verlingo Logo"
-                  className="m-6 mb-4 h-6"
-                  style={{ marginBottom: 150 }}
+                  alt="Documenso Logo"
+                  className="mb-4 h-6"
                 />
 
                 <TemplateDocumentInvite
@@ -72,7 +80,7 @@ export const DocumentInviteEmailTemplate = ({
               </Section>
             </Container>
 
-            {/* <Container className="mx-auto mt-12 max-w-xl">
+            <Container className="mx-auto mt-12 max-w-xl">
               <Section>
                 <Text className="my-4 text-base font-semibold">
                   {inviterName}{' '}
@@ -89,9 +97,9 @@ export const DocumentInviteEmailTemplate = ({
                   )}
                 </Text>
               </Section>
-            </Container> */}
+            </Container>
 
-            {/* <Hr className="mx-auto mt-12 max-w-xl" /> */}
+            <Hr className="mx-auto mt-12 max-w-xl" />
 
             <Container className="mx-auto max-w-xl">
               <TemplateFooter />
@@ -104,12 +112,3 @@ export const DocumentInviteEmailTemplate = ({
 };
 
 export default DocumentInviteEmailTemplate;
-
-const emailWrapper = {
-  maxWidth: '600px',
-  // padding: '1.0rem',
-  borderRadius: '0.5rem',
-};
-const body = {
-  backgroundColor: '#f5f7fb',
-};

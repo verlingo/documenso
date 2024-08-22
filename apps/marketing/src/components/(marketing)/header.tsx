@@ -47,22 +47,31 @@ export const Header = ({ className, ...props }: HeaderProps) => {
       </div>
 
       <div className="hidden items-center gap-x-6 md:flex">
-        <Link href="/pricing" className="text-muted hover:text-muted/80 text-sm font-semibold">
+        <Link
+          href="/pricing"
+          className="text-muted-foreground hover:text-muted-foreground/80 text-sm font-semibold"
+        >
           Pricing
         </Link>
 
-        <Link href="/blog" className="text-muted hover:text-muted/80 text-sm font-semibold">
+        <Link
+          href="/blog"
+          className="text-muted-foreground hover:text-muted-foreground/80 text-sm font-semibold"
+        >
           Blog
         </Link>
 
-        <Link href="/open" className="text-muted hover:text-muted/80 text-sm font-semibold">
+        <Link
+          href="/open"
+          className="text-muted-foreground hover:text-muted-foreground/80 text-sm font-semibold"
+        >
           Open Startup
         </Link>
 
         <Link
           href="https://app.documenso.com/signin?utm_source=marketing-header"
           target="_blank"
-          className="text-muted hover:text-muted/80 text-sm font-semibold"
+          className="text-muted-foreground hover:text-muted-foreground/80 text-sm font-semibold"
         >
           Sign in
         </Link>

@@ -99,7 +99,7 @@ export const DocumentHistorySheet = ({
         <div className="text-foreground px-6 pt-6">
           <h1 className="text-lg font-medium">Document history</h1>
           <button
-            className="text-muted text-sm"
+            className="text-muted-foreground text-sm"
             onClick={() => setIsUserDetailsVisible(!isUserDetailsVisible)}
           >
             {isUserDetailsVisible ? 'Hide' : 'Show'} additional information
@@ -108,7 +108,7 @@ export const DocumentHistorySheet = ({
 
         {isLoading && (
           <div className="flex h-full items-center justify-center">
-            <Loader className="text-muted h-6 w-6 animate-spin" />
+            <Loader className="text-muted-foreground h-6 w-6 animate-spin" />
           </div>
         )}
 
@@ -117,7 +117,7 @@ export const DocumentHistorySheet = ({
             <p className="text-foreground/80 text-sm">Unable to load document history</p>
             <button
               onClick={async () => refetch()}
-              className="text-foreground/70 hover:text-muted mt-2 text-sm"
+              className="text-foreground/70 hover:text-muted-foreground mt-2 text-sm"
             >
               Click here to retry
             </button>
@@ -310,11 +310,11 @@ export const DocumentHistorySheet = ({
                 {isUserDetailsVisible && (
                   <>
                     <div className="mb-1 mt-2 flex flex-row space-x-2">
-                      <Badge variant="neutral" className="text-muted">
+                      <Badge variant="neutral" className="text-muted-foreground">
                         IP: {auditLog.ipAddress ?? 'Unknown'}
                       </Badge>
 
-                      <Badge variant="neutral" className="text-muted">
+                      <Badge variant="neutral" className="text-muted-foreground">
                         Browser: {extractBrowser(auditLog.userAgent)}
                       </Badge>
                     </div>

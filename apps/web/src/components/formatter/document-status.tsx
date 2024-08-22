@@ -32,11 +32,11 @@ export const FRIENDLY_STATUS_MAP: Record<ExtendedDocumentStatus, FriendlyStatus>
   INBOX: {
     label: 'Inbox',
     icon: SignatureIcon,
-    color: 'text-muted',
+    color: 'text-muted-foreground',
   },
   ALL: {
     label: 'All',
-    color: 'text-muted',
+    color: 'text-muted-foreground',
   },
 };
 

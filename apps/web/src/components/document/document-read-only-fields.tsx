@@ -62,7 +62,7 @@ export const DocumentReadOnlyFields = ({ documentMeta, fields }: DocumentReadOnl
                     {FRIENDLY_FIELD_TYPE[field.type].toLowerCase()} field
                   </p>
 
-                  <p className="text-muted text-xs">
+                  <p className="text-muted-foreground text-xs">
                     {field.Recipient.name
                       ? `${field.Recipient.name} (${field.Recipient.email})`
                       : field.Recipient.email}{' '}
@@ -78,7 +78,7 @@ export const DocumentReadOnlyFields = ({ documentMeta, fields }: DocumentReadOnl
                 </PopoverHover>
               </div>
 
-              <div className="text-muted break-all text-sm">
+              <div className="text-muted-foreground break-all text-sm">
                 {field.Recipient.signingStatus === SigningStatus.SIGNED &&
                   match(field)
                     .with({ type: FieldType.SIGNATURE }, (field) =>
@@ -86,11 +86,10 @@ export const DocumentReadOnlyFields = ({ documentMeta, fields }: DocumentReadOnl
                         <img
                           src={field.Signature.signatureImageAsBase64}
                           alt="Signature"
-                          className="h-full w-full object-contain"
-                          // className="h-full w-full object-contain dark:invert"
+                          className="h-full w-full object-contain dark:invert"
                         />
                       ) : (
-                        <p className="font-signature text-muted text-lg duration-200 sm:text-xl md:text-2xl lg:text-3xl">
+                        <p className="font-signature text-muted-foreground text-lg duration-200 sm:text-xl md:text-2xl lg:text-3xl">
                           {field.Signature?.typedSignature}
                         </p>
                       ),
@@ -111,7 +110,7 @@ export const DocumentReadOnlyFields = ({ documentMeta, fields }: DocumentReadOnl
 
                 {field.Recipient.signingStatus === SigningStatus.NOT_SIGNED && (
                   <p
-                    className={cn('text-muted text-lg duration-200', {
+                    className={cn('text-muted-foreground text-lg duration-200', {
                       'font-signature sm:text-xl md:text-2xl lg:text-3xl':
                         field.type === FieldType.SIGNATURE ||
                         field.type === FieldType.FREE_SIGNATURE,

@@ -57,7 +57,9 @@ export default async function TeamsSettingBillingPage({ params }: TeamsSettingsB
               Current plan: {teamSubscription ? 'Team' : 'Early Adopter Team'}
             </p>
 
-            <p className="text-muted mt-0.5">{formatTeamSubscriptionDetails(teamSubscription)}</p>
+            <p className="text-muted-foreground mt-0.5">
+              {formatTeamSubscriptionDetails(teamSubscription)}
+            </p>
           </div>
 
           {teamSubscription && (

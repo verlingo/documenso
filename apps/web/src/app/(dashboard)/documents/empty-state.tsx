@@ -38,7 +38,7 @@ export const EmptyDocumentState = ({ status }: EmptyDocumentProps) => {
 
   return (
     <div
-      className="text-muted/60 flex h-60 flex-col items-center justify-center gap-y-4"
+      className="text-muted-foreground/60 flex h-60 flex-col items-center justify-center gap-y-4"
       data-testid="empty-document-state"
     >
       <Icon className="h-12 w-12" strokeWidth={1.5} />

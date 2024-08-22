@@ -1,6 +1,6 @@
 import config from '@documenso/tailwind-config';
 
-import { Body, Container, Head, Html, Img, Preview, Section, Tailwind } from '../components';
+import { Body, Container, Head, Hr, Html, Img, Preview, Section, Tailwind } from '../components';
 import type { TemplateDocumentCancelProps } from '../template-components/template-document-cancel';
 import { TemplateDocumentCancel } from '../template-components/template-document-cancel';
 import { TemplateFooter } from '../template-components/template-footer';
@@ -32,18 +32,14 @@ export const DocumentCancelTemplate = ({
           },
         }}
       >
-        <Body style={body} className="mx-auto my-auto font-sans">
+        <Body className="mx-auto my-auto bg-white font-sans">
           <Section>
-            <Container
-              style={emailWrapper}
-              className="mx-auto rounded-lg border border-solid border-slate-200 bg-white shadow-lg"
-            >
-              <Section style={{ padding: 30 }}>
+            <Container className="mx-auto mb-2 mt-8 max-w-xl rounded-lg border border-solid border-slate-200 p-4 backdrop-blur-sm">
+              <Section>
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="verlingo Logo"
-                  className="m-6 mb-4 h-6"
-                  style={{ marginBottom: 150 }}
+                  alt="Documenso Logo"
+                  className="mb-4 h-6"
                 />
 
                 <TemplateDocumentCancel
@@ -55,7 +51,7 @@ export const DocumentCancelTemplate = ({
               </Section>
             </Container>
 
-            {/* <Hr className="mx-auto mt-12 max-w-xl" /> */}
+            <Hr className="mx-auto mt-12 max-w-xl" />
 
             <Container className="mx-auto max-w-xl">
               <TemplateFooter />
@@ -68,11 +64,3 @@ export const DocumentCancelTemplate = ({
 };
 
 export default DocumentCancelTemplate;
-const emailWrapper = {
-  maxWidth: '600px',
-  // padding: '1.0rem',
-  borderRadius: '0.5rem',
-};
-const body = {
-  backgroundColor: '#f5f7fb',
-};

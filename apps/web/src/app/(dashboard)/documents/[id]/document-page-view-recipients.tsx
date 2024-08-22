@@ -24,7 +24,7 @@ export const DocumentPageViewRecipients = ({
   const recipients = document.Recipient;
 
   return (
-    <section className=" border-border bg-widget flex flex-col rounded-xl border">
+    <section className="dark:bg-background border-border bg-widget flex flex-col rounded-xl border">
       <div className="flex flex-row items-center justify-between px-4 py-3">
         <h1 className="text-foreground font-medium">Recipients</h1>
 
@@ -43,7 +43,7 @@ export const DocumentPageViewRecipients = ({
         )}
       </div>
 
-      <ul className="text-muted divide-y border-t">
+      <ul className="text-muted-foreground divide-y border-t">
         {recipients.length === 0 && (
           <li className="flex flex-col items-center justify-center py-6 text-sm">No recipients</li>
         )}
@@ -52,9 +52,9 @@ export const DocumentPageViewRecipients = ({
           <li key={recipient.id} className="flex items-center justify-between px-4 py-2.5 text-sm">
             <AvatarWithText
               avatarFallback={recipient.email.slice(0, 1).toUpperCase()}
-              primaryText={<p className="text-muted text-sm">{recipient.email}</p>}
+              primaryText={<p className="text-muted-foreground text-sm">{recipient.email}</p>}
               secondaryText={
-                <p className="text-muted/70 text-xs">
+                <p className="text-muted-foreground/70 text-xs">
                   {RECIPIENT_ROLES_DESCRIPTION[recipient.role].roleName}
                 </p>
               }

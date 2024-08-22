@@ -39,7 +39,7 @@ const CommandDialog = ({ children, commandProps, ...props }: CommandDialogProps)
       >
         <Command
           {...commandProps}
-          className="[&_[cmdk-group-heading]]:text-muted [&_[cmdk-group-heading]]:px-0 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-4 [&_[cmdk-item]_svg]:w-4"
+          className="[&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group-heading]]:px-0 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-4 [&_[cmdk-item]_svg]:w-4"
         >
           {children}
         </Command>
@@ -96,7 +96,7 @@ const CommandGroup = React.forwardRef<
   <CommandPrimitive.Group
     ref={ref}
     className={cn(
-      'text-foreground [&_[cmdk-group-heading]]:text-muted overflow-hidden border-b p-1 last:border-0 [&_[cmdk-group-heading]]:mt-2 [&_[cmdk-group-heading]]:px-0 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-normal [&_[cmdk-group-heading]]:opacity-50 ',
+      'text-foreground [&_[cmdk-group-heading]]:text-muted-foreground overflow-hidden border-b p-1 last:border-0 [&_[cmdk-group-heading]]:mt-2 [&_[cmdk-group-heading]]:px-0 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-normal [&_[cmdk-group-heading]]:opacity-50 ',
       className,
     )}
     {...props}
@@ -136,7 +136,10 @@ CommandItem.displayName = CommandPrimitive.Item.displayName;
 
 const CommandShortcut = ({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
-    <span className={cn('text-muted ml-auto text-xs tracking-widest', className)} {...props} />
+    <span
+      className={cn('text-muted-foreground ml-auto text-xs tracking-widest', className)}
+      {...props}
+    />
   );
 };
 
